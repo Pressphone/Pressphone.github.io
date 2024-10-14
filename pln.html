@@ -1,0 +1,982 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Requi#1976d2 meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript"> 
+
+function stopRKey(evt) { 
+  var evt = (evt) ? evt : ((event) ? event : null); 
+  var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null); 
+  if ((evt.keyCode == 13) && (node.type=="text"))  {return false;} 
+} 
+
+document.onkeypress = stopRKey; 
+
+</script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>     
+    <style>
+        .header-codingasik{
+            height: 75px;
+            width: 100%;
+            background-image: linear-gradient(to bottom, #ff0b00,  #15222A);
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            border-radius: 0px 0px 40px 40px;
+        }
+        .boxsaldo-codingasik{
+            background: white;
+            width: 100%;
+            margin-top:5px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .boxsaldo-codingasik img{
+            width: 35px;
+            float: left;
+            margin-right: 10px;
+        }
+        .boxsaldo-codingasik h1{
+            font-size: 10px;
+        }
+        .boxsaldo-codingasik p{
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: -8px;
+            margin-bottom: 0px;
+        }
+        .boxsaldo-codingasik button{
+            border: none;
+            background: red;
+            font-size: 11px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            float: right;
+            margin-top: -30px;
+            color: white;
+            border-radius: 5px;
+        }
+        form{
+            width:99%;
+            margin-top:10px;
+            background-image: linear-gradient(to bottom, #1D2733,  #15222A);
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            padding:10px;
+            border-radius: 10px;
+            position:relative;
+            display:flex;
+        }
+    form input{
+        width:100%;
+        padding-left:20px;
+        width: 100%;
+        min-height: 40px;  
+        margin-top: 10px;
+        border-radius: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    form input:hover{
+        padding-left:20px;
+        border-bottom: 0px solid #1976d2;
+        border-top: 0px;
+        border-right: 0px;
+        border-left:0px;
+        width:100%;
+        outline:none;
+        margin-bottom:0px;
+    }
+    .img-form{
+        float: right;
+        margin-top: -10px;
+    }
+    #operatorPulsa{
+        font-size:16px;
+        font-weight: bold;
+    }
+    .codingasik-container{
+        margin: 0;
+        padding:0;
+        border: right;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        position: relative;
+        top:20px;
+      }
+    .produk-codingasik{
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        padding:0px;
+        width:100%;
+        height:80px;
+        border-radius:10px;
+        margin-top:10px;
+        background-image: linear-gradient(to bottom, #1D2733,  #15222A);
+    }
+    .produk-codingasikharga{
+        font-size: 18px;
+        font-weight: bold;
+        color: red;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+    .produk-codingasiknama{
+        font-size: 16px;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 5px;
+        margin-top:0px;
+        margin-left: 15px;
+    }
+    .produk-codingasik h4{
+        font-size: 10px;
+        font-weight:bold;
+        float:right;
+        margin-top:-20px;
+        margin-bottom:10px;
+        background: red;
+        color:black;
+        width:50px;
+        text-align:center;
+        padding:5px;
+        margin-right:10px;
+        border-radius:5px;
+    }
+    .terlaris{
+        background-image: url(https://i.ibb.co/vQNYYQ5/flyerdesign-10072022-150118.png);
+        background-size:cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-top:10px;
+        width:130px;
+    }
+    .terlaris h{
+        font-size: 13px;
+        font-weight: bold;
+        color: white;
+        margin-left: 15px;
+        
+    }
+    .box-button-codingasik{
+        margin-top:10px;
+        text-align:center;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        padding:5px;
+        border-radius:10px;
+        margin-bottom:-18px;
+        background-image: linear-gradient(to bottom, #1D2733,  #15222A);
+    }
+    .btn{
+            border: 1px solid red;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 5px;
+            width: 100%;
+            background-color: red;
+            color: white;
+            outline: none;
+        }
+        .btn:hover{
+            background-color: red;
+            color:red;
+        }
+        .col button:hover{
+            background-color: white;
+            color:white;
+        }
+        .col button:active{
+            background-color: white;
+            color:white;
+        }
+    </style>
+    <title>PLN</title>
+  </head>
+  <body style="background-color: #111B21;">
+
+<div class="header-codingasik">
+    <div class="container">
+        <div class="boxsaldo-codingasik">
+            <img src="https://coderasikcode.files.wordpress.com/2022/06/depo.png" alt="">
+            <h1>Saldo Anda</h1>
+            <p id="saldo_user">{{saldo_user}}</p>
+            <a href="https://pressphone.online/akun/?page=riwayat_topup">
+            <button> Riwayat Top Up Saldo</button>
+        </a>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+  function rubah(angka){
+    var reverse = angka.toString().split('').reverse().join(''),
+    ribuan = reverse.match(/\d{1,3}/g);
+    ribuan = ribuan.join('.').split('').reverse().join('');
+    return "Rp."+ribuan;
+  }
+  document.getElementById("saldo_user").innerText=rubah(document.getElementById("saldo_user").textContent);
+  console.log("Powe#1976d2 By QiosScript");
+console.info("Telegram UserName = KiosSceipt");                                console.log("Gunakan Console ini dengan baik tanpa merugikan orang lain atau pihak lain");
+                            console.info("Powe#1976d2 QiosScript");
+                            console.info("Username Telegram Owner = @Qiosscript");              console.info("SERVER : [NORMAL][200] ;");
+</script>
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+       <link rel="stylesheet" href="games1.css" type="text/css" media="all" />
+       <style type="text/css" media="all">
+         .tinggi-konten{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: #15222A;
+}
+#offcanvasBottomLabel{
+  font-size: 16px;
+  text-align: center;
+  margin-left: 25%;
+  opacity: 0.6;
+  margin-top: -2%;
+}
+.jarakKlik{
+  width: 100%;
+  min-height: 7px;
+  opacity: 0.090;
+  background-color: black;
+}
+.dataKlik{
+  width: 102%;
+  height: 200%;
+  background-color: white;
+  position: absolute;
+  margin-left: -5%;
+  margin-top: -5%;
+  padding-top: 3%;
+}
+.tinggi-konten{
+  margin-top: -70%;
+  height: auto;
+  background-color: white;
+}
+.dataKlik h1{
+  font-size: 24px;
+  padding:0px 0px;
+  opacity: 1;
+  float: center;
+  text-align: center;
+  margin-top:-20px;
+  z-index:1000000;
+  padding:20px 15px;
+}
+.dataKlik h2{
+  margin-left: 5%;
+  font-size: 14px;
+  opacity: 0.8;
+  float: left;  
+}
+.dataKlik h3{
+  margin-left: 5%;
+  font-size: 17px;
+  opacity: 0.8;
+}
+.dataKlik h5{
+  font-size: 14px;
+  margin-left: 5%;
+  float: left;
+  border: 1px solid #26A795;
+  padding: 4px;
+  border-radius: 5px;
+  margin-right: 0.5%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  font-weight: normal;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #26A795;
+}
+.dataKlik h5:hover{
+  background-color: #26A795;
+  color: white;
+}
+.dataKlik p{ 
+  margin-left: 5%;  
+  font-size: 14px;
+  opacity: 0.6;
+  text-align: right;
+  margin-right: 5%; 
+  
+}
+.cleaning{
+  width: 40%;
+  float: left;
+  margin-left: 5%;
+  margin-right: 2%;
+  border: none;
+  background-color: white;
+  color: black;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 2%;
+  border: 1px solid red;
+}
+.postdata{
+  margin-top: 2%;
+  width: 40%;
+  float: left;
+  margin-left: 5%;
+  margin-right: 2%;
+  border: none;
+  background-color: red;
+  color: black;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid red;
+}
+
+.bg-header{
+  width: 100%;
+  height: auto;
+}
+.bg-header img{
+  width: 100%;
+  min-height: 100px;
+}
+#alertId{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(23,23,23,0.478);
+  z-index: 100;
+  top: 0;
+  margin: 0;
+  overflow: hidden;
+  display: none;
+}
+#alertId img{
+  width: 100%;
+  min-height: 100px;
+  position: fixed;
+  z-index: 10;
+  overflow: hidden;
+  background: fixed;
+}
+.info_alert{
+  min-width: 22px;
+  min-height: 22px;
+  position: absolute;
+  background-color: red;
+  color: white;
+  border-radius: 50px;
+  margin-left: 55%;
+  margin-top: 10px;
+  display:table;
+}
+.info_alert h3{
+  font-size: 15px;
+  text-align: center;
+  display:table-cell; 
+  vertical-align: middle; 
+}
+#value {
+  float: left;
+  padding-left:5%; 
+  padding-right:5%; 
+  min-height: 40px;  
+  margin-top: -10px;
+  border-radius: 10px;
+  width:100%;
+  letter-spacing:10px;
+}
+#contact {
+  float: right;
+  padding-left:7px;
+  padding-right:10px;  
+  min-height: 40px;  
+  margin-top:30px;
+  border-radius: 10px;
+  width:75%;
+  background-color:red;
+  border-color:black;
+}
+#img_operator{
+  position: absolute;
+  width: 8%;
+  height: auto;
+  margin-left:0px;
+  margin-top:5px;
+}
+#userId{
+  width: 90%;
+  float: left;
+  margin-right: 5%;
+  margin-left: 5%;
+  outline: none;
+  padding-left: 2.5%;
+  min-height: 45px;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid red;
+}
+
+#alertId h1{
+  margin-top: 30%;
+  font-size: 30px;
+  z-index: 100;
+  text-align: center;
+  color: yellow;
+}
+
+.btn-down{
+        min-height: 40px;
+        width:40px;
+        margin-top:10px;
+        text-align:center;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        padding:px;
+        border-radius:5px;        
+        background-image: linear-gradient(to bottom, #ff0a00,  #15222A);
+        margin-left:px;
+        float:right;
+}
+.btn-down button{
+  width: 80%;
+  margin-left:0;
+  background-color:#26a69a ;
+  border: none;
+  border-radius: 20px;
+  padding: 2%;
+  color: white;
+  outline: none;
+}
+.btn-down button:hover, .info_alert:hover{
+  background-color: green;
+}
+/* produk */
+.bg-produk{
+  background-color: #111B21;
+  width: 96%;
+  margin-top: 5%;
+  min-height: 100%;
+  padding-top: 5%;
+  margin-left: 2%;
+  border-radius: 10px;
+}
+.produk{
+  width: 45%;
+  min-height: auto;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-bottom: 5%;
+  padding: 1%;
+  padding-top: 5%;
+  padding-bottom: 1%;
+  float: left;
+  color: white; 
+  background-image: linear-gradient(to bottom, #1D2733,  #15222A);
+  border-radius: 5px;
+ /* box-shadow:rgb(222,222,222) 0px 1px 3px 1px ;*/
+}
+.produk h5{
+  font-size: 15px;
+  margin-left: 5%;
+  opacity: 0.7;
+}
+.produk p{
+  margin-left: 5%;
+  font-weight: bold;
+}
+
+#alertUserId{
+  position: absolute;
+  font-size: 10px;
+  font-weight: bold;
+  color: red;
+  margin-top: 13%;
+  margin-left: 5%;
+}
+#alertUserId2{
+  position: absolute;
+  font-size: 10px;
+  font-weight: bold;
+  color: red;
+  margin-top: 1%;
+  margin-left: 60%;
+}
+
+.jarakHr{
+  width: 100%;
+  height: 5px;
+  background-color: #f5f5f5;
+  margin-top: -10%;
+  margin-bottom: 5%;
+}
+.informasi-warning{
+  width: 100%;
+  height: auto;
+}
+.box-info{
+  width: 94%;
+  height: auto;
+  box-shadow:rgb(222,222,222) 0px 1px 3px 1px ;
+  border-radius: 5px;
+  padding: 5%;
+}
+.box-info p{
+  font-size: 10px;
+}
+       </style>
+    <body style="background-color: #111B21;">
+  <section class="bg-header">
+<center>
+    <img src="https://i.imgur.com/GNhH0dC.png" alt="" style=width:95%;margin-top:80px;/>
+</center>
+  </section>
+  
+  <!-- BAGIAN HEADER --> 
+ <form action="" method="get" accept-charset="utf-8">        
+      <div class="col-10"> 
+          <p style="color:white;">Masukkan Token Meteran</p>        
+       <input type="number" id="value" name="value" placeholder="865**********98" aria-describedby="basic-ID" value="" class="{{hasil_scan}}" autocomplete="off" /> 
+       </div>
+       <div class="col-2">
+            <a href="https://pressphone.online/scan_all">
+         <div class="contact" id="contact">
+          <img id="img_operator" src="https://i.imgur.com/EbVTdXY.png" alt="" />
+        </div>
+</a>  
+</div>              
+       
+                    </form>                 
+                </div>
+            </div>  
+</div>
+</body>
+
+</html>
+<!-- BUTTON SWITH -->
+    <div class="container">
+        <div class="box-button-codingasik">
+        <div class="row menuawal" style="text-align:center;">
+
+                  <div class="col">
+<input type="radio" onclick="openCity(event, 'Codingasik1')"class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+<label style="color:white;" class="btn" for="btnradio1">PRABAYAR</label>
+                  </div>
+                  <div class="col">
+<input type="radio" onclick="openCity(event, 'Codingasik2')"class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+<label style="color:white;" class="btn" for="btnradio2">PASCABAYAR</label>
+                  </div>
+                </div>
+              </div>
+</div>
+  </div>
+<!-- AKHIR BUTTON SWITCH -->
+
+<div class="tabcontent" id="Codingasik1">
+<div class="container">
+<div class="codingasik-container">    
+<!-- PRODUK 1 -->    
+	<div class="produk-codingasik" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" id="produk" onclick="pln_1()">     
+      <div class="produk-codingasikharga" nama="harga" id="harga_pln1">
+          Rp.22.000
+      </div>
+      <div class="produk-codingasiknama" name="nama" id="nama_pln1">
+          Token PLN 20.000
+      </div>
+      <div name="url" id="url_pln1" hidden>https://pressphone.online/produk/token-listrik-20-000-1301994</div>
+      <h4>Tersedia</h4>
+     </div>
+<!-- AKHIR PRODUK 1 -->
+<!-- PRODUK 1 -->    
+	<div class="produk-codingasik" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" id="produk" onclick="pln_2()">     
+      <div class="produk-codingasikharga" nama="harga" id="harga_pln2">
+          Rp.52.000
+      </div>
+      <div class="produk-codingasiknama" name="nama" id="nama_pln2">
+          Token PLN 50.000
+      </div>
+      <div name="url" id="url_pln2" hidden>https://pressphone.online/produk/token-listrik-50-000-1301995</div>
+      <h4>Tersedia</h4>
+     </div>
+<!-- AKHIR PRODUK 1 -->
+<!-- PRODUK 1 -->    
+	<div class="produk-codingasik" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" id="produk" onclick="pln_3()">     
+      <div class="produk-codingasikharga" nama="harga" id="harga_pln3">
+          Rp.102.000
+      </div>
+      <div class="produk-codingasiknama" name="nama" id="nama_pln3">
+          Token PLN 100.000
+      </div>
+      <div name="url" id="url_pln3" hidden>https://pressphone.online/produk/token-listrik-100-000-1301997</div>
+      <h4>Tersedia</h4>
+     </div>
+<!-- AKHIR PRODUK 1 -->
+<!-- PRODUK 1 -->    
+	<div class="produk-codingasik" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" id="produk" onclick="pln_4()">     
+      <div class="produk-codingasikharga" nama="harga" id="harga_pln4">
+          Rp.202.000
+      </div>
+      <div class="produk-codingasiknama" name="nama" id="nama_pln4">
+          Token PLN 200.000
+      </div>
+      <div name="url" id="url_pln4" hidden>https://pressphone.online/produk/token-listrik-200-000-1301999</div>
+      <h4>Tersedia</h4>
+     </div>
+<!-- AKHIR PRODUK 1 -->
+<!-- PRODUK 1 -->    
+	<div class="produk-codingasik" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" id="produk" onclick="pln_5()">     
+      <div class="produk-codingasikharga" nama="harga" id="harga_pln5">
+          Rp.502.000
+      </div>
+      <div class="produk-codingasiknama" name="nama" id="nama_pln5">
+          Token PLN 500.000
+      </div>
+      <div name="url" id="url_pln5" hidden>https://pressphone.online/produk/token-listrik-500-000-1302001</div>
+      <h4>Tersedia</h4>
+     </div>
+<!-- AKHIR PRODUK 1 --> 
+<!-- PRODUK 1 -->    
+	<div class="produk-codingasik" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" id="produk" onclick="pln_6()">     
+      <div class="produk-codingasikharga" nama="harga" id="harga_pln6">
+          Rp.1.002.000
+      </div>
+      <div class="produk-codingasiknama" name="nama" id="nama_pln6">
+          Token PLN 1.000.000
+      </div>
+      <div name="url" id="url_pln6" hidden>https://pressphone.online/produk/token-listrik-1-000-000-1302004</div>
+      <h4>Tersedia</h4>
+  </div>     
+<!-- AKHIR PRODUK 1 -->
+
+</div>
+</div>  
+</div>  
+
+<br>
+
+<div style="margin-top:-25px;" class="tabcontent" id="Codingasik2">
+<div class="container">
+<div class="codingasik-container">    
+<!-- PRODUK 1 -->    
+	<div class="produk-codingasik" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" id="produk" onclick="pln_7()">     
+      <div class="produk-codingasikharga" nama="harga" id="harga_pln7">
+          Rp.0
+      </div>
+      <div class="produk-codingasiknama" name="nama" id="nama_pln7">
+          PLN Pascabayar
+      </div>
+      <div name="url" id="url_pln7" hidden>https://pressphone.online/produk/tagihan-listrik-pascabayar-1320208</div>
+      <h4>Tersedia</h4>
+     </div>
+<!-- AKHIR PRODUK 1 -->
+
+</div>
+</div>  
+</div> 
+
+<br> 
+       
+  <!-- AREA DATA SAAT DIKLIK OLEH USER --> 
+   <div class="offcanvas offcanvas-bottom" tabindex="10" id="offcanvasBottom"  style="border-top-left-radius: 20px; border-top-right-radius: 20px;z-index:10000;">
+  <div class="offcanvas-header tinggi-konten">
+    <!-- Konten header canvas !-->
+  </div>
+  <div class="offcanvas-body medium">
+    <div class="dataKlik">
+      <div style="clear:both;"> 
+    <h1 style="text-align:center;font-weight:bold;">KONFIRMASI PEMBELIAN</h1>
+    <hr class="jarakKlik"/>  
+    </div>
+    <h3 style="color: black; margin-top: 4%; font-size: 16px; margin-left:4%; opacity:1;">Detail pembayaran:</h3>
+    <div style="border-bottom:1px dashed rgb(197,197,197);">
+    </div><br>
+    <h2> Nomor Tujuan:</h2>
+    <p id="nomTujuan">none</p>    
+    <h2>Produk:</h2>
+    <p id="namaBarang">none</p>
+    <h2>Harga:</h2>
+    <p id="hargaBarang">none</p>
+    <h2>Diskon & Potongan:</h2>
+    <p id="metodePembayaran">Rp0</p>  
+    <p id="urlLink" hidden>none</p>   
+    <div style="border-bottom:1px dashed rgb(197,197,197);">
+    </div>
+    <h2 style="color: black; margin-top: 4%; font-size: 16px; margin-left:4%; opacity:1;">Total Pembayaran:</h2>
+    
+    <p id="totalTagihan" style="color: black; margin-top: 4%; font-size: 16px; opacity:1;font-weight:bold;">none</p>
+    
+    <hr class="jarakKlik"/>        
+    <button class="cleaning" type="button" data-bs-dismiss="offcanvas" aria-label="close">Ubah</button>
+    
+    <button type="button" class="postdata" onclick="kirimData()">Lanjutkan</button>
+    </div>
+  </div>
+</div>
+    			
+
+    
+<div id="saldo_user"></div>						
+<script type="text/javascript">
+  function rubah(angka){
+    var reverse = angka.toString().split('').reverse().join(''),
+    ribuan = reverse.match(/\d{1,3}/g);
+    ribuan = ribuan.join('.').split('').reverse().join('');
+    return "Rp."+ribuan;
+  }
+  document.getElementById("saldo_user").innerText=rubah(document.getElementById("saldo_user").textContent);
+  console.log("Powe#1976d2 By QiosScript");
+console.info("Telegram UserName = KiosSceipt");                                console.log("Gunakan Console ini dengan baik tanpa merugikan orang lain atau pihak lain");
+                            console.info("Powe#1976d2 QiosScript");
+                            console.info("Username Telegram Owner = @Qiosscript");              console.info("SERVER : [NORMAL][200] ;");
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+        function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }        document.getElementById("btnradio1").click();
+      console.log("Gunakan Console ini dengan baik tanpa merugikan orang lain atau pihak lain");
+                                      console.info("Powe#1976d2 By codingasik");
+                                      console.info("Username Telegram Owner = codinasik.my.id");
+                                      console.info("SERVER : [NORMAL][200] ;");
+  </script>
+
+ <!-- Non Aktif Enter -->     
+<script> 
+    document.addEventListener('keypress', function (e) { if (e.keyCode === 13 || e.which === 13) { e.preventDefault(); return false; } });
+</script> 
+<!-- Non Aktif Enter -->       
+      
+  <script>
+  // bersihkan konten alert saat diklik oleh user
+  function clearData(e) {
+    document.getElementById('alertWarning').style.display = "none";
+  }
+  
+  // SIMPAN SEMUA HASIL CETAKAN DARI SEMUA FUNCTION KESINI
+  // CETAK NAMA BARANG
+   let cetakNama = document.getElementById("namaBarang");
+   // CETAK HARGA BARANG
+   let cetakHarga = document.getElementById("hargaBarang");
+  // CETAK URL BARANG
+  let cetakUrl = document.getElementById("urlLink");
+  // CETAK NOMOR TUJUAN
+   let nomorTujuan = document.getElementById("nomTujuan");
+   // TOTAL PEMBAYARAN USER
+   let totalTagihan = document.getElementById("totalTagihan");
+   
+   // CETAK OPERATOR PULSA
+   let cetak_operator = document.getElementById("cek_id");
+     
+   // cetak produk yang  manapun dan keluarkan hanya produk yang diklik oleh user dan ambil semua data dari html
+   
+   // ############# KALAU KAMU PAKAI HOSTING GK PERLU LAKUKAN INI, CUKUP BIKIN CLASS UNTUK QUERY DATABASE KAMU #############
+     
+   // cara ini hanya untuk natif atau untuk bukaolshop
+  function pln_1() {
+     nama = document.getElementById("nama_pln1").innerHTML;
+     harga = document.getElementById("harga_pln1").innerHTML;
+     url = document.getElementById("url_pln1").innerHTML;
+     let nomorInputan = document.getElementById("value").value.replace(/\s+/g,'');
+    
+     // jika nomor tidak terdeteksi kasih hasil respon kosong disemua data
+     if (nomorInputan == []|| nomorInputan== null || nomorInputan == 08) {
+     nomorTujuan.innerHTML = none;       
+     }    
+     nomorTujuan.innerHTML = nomorInputan;                         
+     cetakNama.innerHTML = nama;
+     cetakHarga.innerHTML = harga;
+     totalTagihan.innerHTML = harga;
+     cetakUrl.innerHTML = url;                              
+  }  
+  
+   // ############# KALAU KAMU PAKAI HOSTING GK PERLU LAKUKAN INI, CUKUP BIKIN CLASS UNTUK QUERY DATABASE KAMU #############
+     
+   // cara ini hanya untuk natif atau untuk bukaolshop
+  function pln_2() {
+     nama = document.getElementById("nama_pln2").innerHTML;
+     harga = document.getElementById("harga_pln2").innerHTML;
+     url = document.getElementById("url_pln2").innerHTML;
+     let nomorInputan = document.getElementById("value").value.replace(/\s+/g,'');
+    
+     // jika nomor tidak terdeteksi kasih hasil respon kosong disemua data
+     if (nomorInputan == []|| nomorInputan== null || nomorInputan == 08) {
+     nomorTujuan.innerHTML = none;       
+     }    
+     nomorTujuan.innerHTML = nomorInputan;                         
+     cetakNama.innerHTML = nama;
+     cetakHarga.innerHTML = harga;
+     totalTagihan.innerHTML = harga;
+     cetakUrl.innerHTML = url;                              
+  }   
+  
+   // ############# KALAU KAMU PAKAI HOSTING GK PERLU LAKUKAN INI, CUKUP BIKIN CLASS UNTUK QUERY DATABASE KAMU #############
+     
+   // cara ini hanya untuk natif atau untuk bukaolshop
+  function pln_3() {
+     nama = document.getElementById("nama_pln3").innerHTML;
+     harga = document.getElementById("harga_pln3").innerHTML;
+     url = document.getElementById("url_pln3").innerHTML;
+     let nomorInputan = document.getElementById("value").value.replace(/\s+/g,'');
+    
+     // jika nomor tidak terdeteksi kasih hasil respon kosong disemua data
+     if (nomorInputan == []|| nomorInputan== null || nomorInputan == 08) {
+     nomorTujuan.innerHTML = none;       
+     }    
+     nomorTujuan.innerHTML = nomorInputan;                         
+     cetakNama.innerHTML = nama;
+     cetakHarga.innerHTML = harga;
+     totalTagihan.innerHTML = harga;
+     cetakUrl.innerHTML = url;                              
+  }  
+     
+   // ############# KALAU KAMU PAKAI HOSTING GK PERLU LAKUKAN INI, CUKUP BIKIN CLASS UNTUK QUERY DATABASE KAMU #############
+     
+   // cara ini hanya untuk natif atau untuk bukaolshop
+  function pln_4() {
+     nama = document.getElementById("nama_pln4").innerHTML;
+     harga = document.getElementById("harga_pln4").innerHTML;
+     url = document.getElementById("url_pln4").innerHTML;
+     let nomorInputan = document.getElementById("value").value.replace(/\s+/g,'');
+    
+     // jika nomor tidak terdeteksi kasih hasil respon kosong disemua data
+     if (nomorInputan == []|| nomorInputan== null || nomorInputan == 08) {
+     nomorTujuan.innerHTML = none;       
+     }    
+     nomorTujuan.innerHTML = nomorInputan;                         
+     cetakNama.innerHTML = nama;
+     cetakHarga.innerHTML = harga;
+     totalTagihan.innerHTML = harga;
+     cetakUrl.innerHTML = url;                              
+  }    
+  
+   // ############# KALAU KAMU PAKAI HOSTING GK PERLU LAKUKAN INI, CUKUP BIKIN CLASS UNTUK QUERY DATABASE KAMU #############
+     
+   // cara ini hanya untuk natif atau untuk bukaolshop
+  function pln_5() {
+     nama = document.getElementById("nama_pln5").innerHTML;
+     harga = document.getElementById("harga_pln5").innerHTML;
+     url = document.getElementById("url_pln5").innerHTML;
+     let nomorInputan = document.getElementById("value").value.replace(/\s+/g,'');
+    
+     // jika nomor tidak terdeteksi kasih hasil respon kosong disemua data
+     if (nomorInputan == []|| nomorInputan== null || nomorInputan == 08) {
+     nomorTujuan.innerHTML = none;       
+     }    
+     nomorTujuan.innerHTML = nomorInputan;                         
+     cetakNama.innerHTML = nama;
+     cetakHarga.innerHTML = harga;
+     totalTagihan.innerHTML = harga;
+     cetakUrl.innerHTML = url;                              
+  }  
+  
+   // ############# KALAU KAMU PAKAI HOSTING GK PERLU LAKUKAN INI, CUKUP BIKIN CLASS UNTUK QUERY DATABASE KAMU #############
+     
+   // cara ini hanya untuk natif atau untuk bukaolshop
+  function pln_6() {
+     nama = document.getElementById("nama_pln6").innerHTML;
+     harga = document.getElementById("harga_pln6").innerHTML;
+     url = document.getElementById("url_pln6").innerHTML;
+     let nomorInputan = document.getElementById("value").value.replace(/\s+/g,'');
+    
+     // jika nomor tidak terdeteksi kasih hasil respon kosong disemua data
+     if (nomorInputan == []|| nomorInputan== null || nomorInputan == 08) {
+     nomorTujuan.innerHTML = none;       
+     }    
+     nomorTujuan.innerHTML = nomorInputan;                         
+     cetakNama.innerHTML = nama;
+     cetakHarga.innerHTML = harga;
+     totalTagihan.innerHTML = harga;
+     cetakUrl.innerHTML = url;                              
+  }  
+      
+   // ############# KALAU KAMU PAKAI HOSTING GK PERLU LAKUKAN INI, CUKUP BIKIN CLASS UNTUK QUERY DATABASE KAMU #############
+     
+   // cara ini hanya untuk natif atau untuk bukaolshop
+  function pln_7() {
+     nama = document.getElementById("nama_pln7").innerHTML;
+     harga = document.getElementById("harga_pln7").innerHTML;
+     url = document.getElementById("url_pln7").innerHTML;
+     let nomorInputan = document.getElementById("value").value.replace(/\s+/g,'');
+    
+     // jika nomor tidak terdeteksi kasih hasil respon kosong disemua data
+     if (nomorInputan == []|| nomorInputan== null || nomorInputan == 08) {
+     nomorTujuan.innerHTML = none;       
+     }    
+     nomorTujuan.innerHTML = nomorInputan;                         
+     cetakNama.innerHTML = nama;
+     cetakHarga.innerHTML = harga;
+     totalTagihan.innerHTML = harga;
+     cetakUrl.innerHTML = url;                              
+  }  
+        
+  function alertInfoNews(){
+    let a = document.getElementById("value").value;
+    let textAlertInfo = "Masukkan Nomor Telepon 10-13 karakter";
+    let kontenAlert = document.getElementById('kontenAlertInformation');
+    if(a == 0 || a == [] || a == null || a == " " || a == ""){
+    kontenAlert.style.display = "none";
+    
+  }else if(a.length < 6){
+    kontenAlert.innerHTML = textAlertInfo;
+    kontenAlert.style = "color:#1976d2;";
+  }else if(a > 6){
+    kontenAlert.style.display = "none";
+  }
+  }
+  // SEBELUM KIRIM DATA NOMOR TUJUAN PERIKSA DAN HILANGKAN SEMUA SIMBOL SIMBOL DAN HURUF, CETAK HANYA ANGKA SAJA DAN BERIKAN SPASI DI INPUTAN
+  // hasil inputan tidak boleh lebih dari 13 karakter
+  document.getElementById('value').addEventListener('input', function (e) {
+   e.target.value = e.target.value.replace(/[^0-9]/g,'').substring(0, 18).trim();
+  });
+   
+   //buat fungsi untuk kirim produk yg dipilih user ke bukaolshop
+   function kirimData(urlLink) {
+     // masukkan catatan parameter dari bukaolshop
+    const catatan = "?catatan=";
+    // ambil nomor dari hasil inputan user dan hilangkan semua karakter selain ANGKA
+    const nomor = document.getElementById('value').value;
+    // sebelum mengirimkan data 
+    //periksa dulu apakah nomor tujuan sudah di isi
+    //periksa juga produk user dan periksa harga produk
+    if (nomor == null || nomor == "0858" || nomor.length < 6 || nomor == "" || nomor == "0" || nomor == "none") {
+      // jika nomor kosong jangan kirimkan data nomor harus lebih dari 10 karakter dan beri peringatan ke user
+      swal({ title: "Nomor tidak Lengkap", text: "Periksa Kembali Nomor Tujuan", icon: "error", button: false });
+    }else{
+    // jika nomor ada isinya dan isinya lebih dari 10 karakter kirimkan data ke bukaolshop
+    window.location.href=url+catatan+nomor;
+   }}
+      </script>
+  <script type="text/javascript"> function contoh() { swal({ title: "Denom 5.000", text: "Masa Akses Berlaku Sesuai Zona : (Sumatra,Jawa & Balinusa 6Jam) (Kalimantan & Sulawesi 4Jam) (Maluku & Papua 2Jam)", icon: "info", button: true: }); } </script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous   </script>
+  
+  </body>
+</html>
+ 

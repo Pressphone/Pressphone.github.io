@@ -1,0 +1,604 @@
+<!DOCTYPE html>	
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+
+
+<head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@600;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+
+
+
+<title>My Account</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color:#f1f1f1;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .container__blue__color {
+        background-image: linear-gradient(to bottom, #ff0b00,  #15222A);
+        padding: 5px 15px 0;
+        width:100%;
+        height:200px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        position:flex;
+         z-index:1;
+      }      
+      
+      .namanya1 {
+      	 position:relatif;
+      	 font-size:15px;
+      	 color:white;
+      	 text-align:center;    
+      	 font-style:'urbanist'sans;  	     	 
+      	 border-radius:5px;
+      } 
+      .namanya2 {
+      	 position:relatif;
+      	 font-size:15px;
+      	 color: white;
+      	 text-align:center;    
+      	 font-style:'urbanist'sans;  	     	 
+      	 border-radius:5px;
+      } 
+      .gambargg {
+       box-shadow: 0.5px 0.5px 6px -2.5px rgba(0,0,0,0.4);    
+}
+.container--games {
+  margin-top:0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  float:left;
+  gap: 10px;
+  padding: 0px 10px 10px 10px;
+  z-index:100000;
+}
+a:link { 
+  text-decoration: none; 
+} 
+a:visited { 
+  text-decoration: none; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+a:active { 
+  text-decoration: none; 
+}
+
+.image--game {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.card--game {
+  margin-top:-35px;
+  background-color:white;
+  border-radius: 8px;
+  padding: 5px 5px 10px 10px;
+  height:auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  background-position: center;
+  transition: 1s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+
+}
+.saldo--card--game {
+  margin-top:5px;
+  font-size:16px;
+  font-weight: 900;
+  color:black; 
+  text-decoration: none;
+}
+.nomsaldo--card--game {
+  margin-top:0px;
+  font-size:12px; 
+  pading-buttom:5px;
+  color:black; 
+  text-decoration: none;
+}
+.point--card--game {
+  color: black;
+  margin-top:5px;
+  font-size:16px; 
+  font-weight: 900;
+  text-decoration: none;
+}
+.nompoint--card--game {
+  margin-top:0px;
+  font-size:12px; 
+  color:black; 
+  text-decoration: none;
+}
+.card--game:hover {
+  margin-top:-40px;
+  background-color: white;
+  background-color: white;
+  background-image: radial-gradient(circle, transparent 1%, red 1%);
+  background-position: center;
+  background-size: 59000%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.card--game:hover :is(.text_token, .harga_token) {
+  color: #fff;
+}
+
+.card--game:active {
+  transition: background 0s;
+  background-color: #fff;
+  background-size: 200%;
+  background-height:100%;
+}
+
+
+@media (max-width: 375px) {
+  .title--card--game,
+  .deskripsi--card--game {
+    font-size: 10px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 340px) {
+  .card--game {
+    padding: 10px 5px;
+  }
+}
+
+@media (max-width: 340px) {
+  .card--game {
+    padding: 10px 5px;
+  }
+}
+
+@media (max-width: 290px) {
+  .card--game {
+    padding: 5px 8px;
+  }
+  .title--card--game,
+  .deskripsi--card--game {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 435px) {
+  .title--card--game,
+  .deskripsi--card--game {
+    font-size: 10px;
+    font-weight: 500;
+  }
+  .card--game {
+    padding: 10px 5px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .container--games {
+    margin-top: 15px;
+    padding: 0 40px;
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .title--card--game,
+  .deskripsi--card--game {
+    font-size: 13px;
+  }    
+    </style>
+  </head>
+  <body>
+    <section class="container__blue__color">	   		
+<center>
+    <a href="https://pressphone.online/akun/?page=profil">
+<img class="gambargg" style="top:10px;border-radius:50px;border:5px solid black;width:100px;position:relatif;" src="{{foto_profil}}"></a>
+	<h1 class="namanya1">{{nama_user}}</h1> 
+	<h2 class="namanya2">{{nomor_telepon}}</h2>   
+</center>
+</section>
+    <section class="container container--games">     
+      <!-- Pembuka produk -->
+      <div class="profile card--game">
+                <a href="https://pressphone.online/scan_barcode">      				
+        <div class="saldo--card--game">Saldo</div>
+        <div class="nomsaldo--card--game">{{saldo_user}}</div>
+            </a>    
+      </div>
+       <!-- Penutup produk -->       
+       
+             <!-- Pembuka produk -->
+      <div class="profile card--game">
+                <a href="https://pressphone.online/scan_qr">      				
+        <div class="point--card--game">Point</div>
+            </a>    
+        <div class="nompoint--card--game">{{poin_member}}</div>
+            </a>    
+      </div>
+       <!-- Penutup produk -->       
+       
+      </div>
+</section>   
+ 
+<style>
+.qiosscriptsaldo {
+ margin-top:5px;
+ background:transparent;
+ height:100%;
+ pading-top:1px;
+ padding-left:15px;
+ padding-right:15px; 
+}				 
+.qiosscript {
+ background: #f1f1f1;
+ height:100%;
+ pading-top:1px;
+ padding-left:15px;
+ padding-right:15px;
+ border-top-left-radius: 30px;
+ border-top-right-radius: 30px;
+ border-bottom-left-radius: 30px;
+ border-bottom-right-radius: 30px;
+ 
+}				
+.menuakunsaldo {
+  width:100%;
+  padding: 10px;  
+  height: 40px;
+  border-bottom: 1px solid #d1d1d1;
+  border-radius:5px;  
+  margin-bottom: 0px;
+  margin-top: 0px;
+  background: #fff;
+  padding-top:5px;  
+box-shadow: rg220b(, 220, 233) 1px 1px 1px 1px;
+}
+.menuakun {
+  width:100%;
+  padding: 10px;  
+  height: 40px;
+  border-bottom: 1px solid #d1d1d1;
+  border-radius:5px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  background: #fff;
+  padding-top:5px;
+box-shadow: rgb(220, 220, 233) 1px 1px 1px 1px;
+}
+
+.gambarmenuakun {
+  width:20px;
+  margin-top: 10px;
+  background: #transparent;
+  border-radius: 0px;
+  margin-bottom:0px;
+}
+
+.textkiri {
+  margin-left:5px;
+  font-weight: 600;
+  font-family: 'arial', sans-serif;
+  color: #000000;
+  margin-top: 6px;
+  font-size: 12px;
+  display: inline;
+  background: transparent;
+  position: absolute;
+}  
+.point {
+  margin-left:5px;
+  font-weight: 600;
+  font-family: 'arial', sans-serif;
+  color: #000000;
+  margin-top: 6px;
+  font-size: 12px;
+  display: inline;
+  background: transparent;
+  position: absolute;
+}  
+.nompoint{
+  margin-left:5px;
+  font-weight: 600;
+  font-family: 'arial', sans-serif;
+  color: #000000;
+  margin-top: 20px;
+  font-size: 16px;
+  display: inline;
+  background: transparent;
+  position: absolute;
+}
+.saldo{
+  margin-left:185px;
+  font-weight: 600;
+  font-family: 'arial', sans-serif;
+  color: #000000;
+  margin-top: 6px;
+  font-size: 12px;
+  display: inline;
+  background: transparent;
+  position: absolute;
+}
+.nomsaldo {
+  margin-left:185px;
+  font-weight: 600;
+  font-family: 'arial', sans-serif;
+  color: #000000;
+  margin-top: 20px;
+  font-size: 16px;
+  display: inline;
+  background: transparent;
+  position: absolute;
+}
+.refresh { 
+  border-radius: 0px;
+  margin-top:15px;
+  width:30px;    
+}
+.textkanan {
+  margin-left:10px;
+  font-weight: 600;
+  font-family: 'arial', sans-serif;
+  margin-top: 6px;
+  right: 45px;
+  color: #000000;
+  font-size: 12px;
+  display: inline;
+  background: none;
+  position: absolute;
+}
+.textkanan2 {
+  margin-left:10px;
+  font-weight: 600;
+  font-family: 'arial', sans-serif;
+  margin-top: -6px;
+  right: 25px;
+  color: #000000;
+  font-size: 26px;
+  display: inline;
+  background: none;
+  position: absolute;
+}
+.texttengah { 
+  margin-top:-8px;
+  margin-left:165px;
+  font-size:40px;
+  font-weight: 600;
+  font-family: 'arial', sans-serif;
+  color: #000000; 
+  background: none;
+  position: absolute;
+}
+.tittlemenu{
+    margin-left:6px;
+    margin-top:30px;
+    margin-bottom: 10px;
+    font-family: 'arial', sans-serif;color: #595959;
+    background:#f1f1f1;
+    font-size:12px;
+    font-weight: 900;
+}
+</style>
+
+		 <p class="tittlemenu">Akun</p>		 		 
+		     <a href="https://pressphone.online/digital/265876"> 
+     <div class="menuakun" style="margin-top: 0px;border-bottom-radius: 0px;"> 
+      <div class="textkiri">
+      Upgrade Premium
+      </div> 
+      <div class="textkanan2">
+       ›
+      </div> 
+     </div></a>
+     
+		 		
+    <a href="https://pressphone.online/akun/?page=favorit"> 
+     <div class="menuakun" style="margin-top: 0px;border-bottom-radius: 0px;"> 
+      <div class="textkiri">
+      My Favorit
+      </div> 
+      <div class="textkanan2">
+       ›
+      </div> 
+     </div></a>
+     
+         <a href="https://pressphone.online/digital/261794"> 
+     <div class="menuakun" style="margin-top: 0px;border-bottom-radius: 0px;"> 
+      <div class="textkiri">
+      My Voucher
+      </div> 
+      <div class="textkanan2">
+       ›
+      </div> 
+     </div></a>
+     
+     <a href="https://pressphone.online/digital/138053"> 
+     <div class="menuakun" style="margin-top: 0px;"> 
+      <div class="textkiri">
+      My Referral
+      </div> 
+      <div class="textkanan2">
+       ›
+      </div>       
+     </div></a>
+          
+     <a href="https://pressphone.online/akun/?page=transaksi"> 
+     <div class="menuakun" style="margin-top: 0px;"> 
+      <div class="textkiri">
+      Transaksi
+      </div> 
+      <div class="textkanan2">
+       ›
+      </div>       
+     </div></a>
+
+ <p class="tittlemenu">Keamanan</p>              
+                   <a href="https://pressphone.online/akun/?page=profil"> 
+     <div class="menuakun" style="margin-top: 0px;"> 
+      <div class="textkiri">
+      Nomor Hp
+      </div> 
+      <div class="textkanan">
+       {{nomor_telepon}}
+      </div> 
+      <div class="textkanan2">
+       ›
+      </div>   
+     </div></a>    
+
+<a href="https://pressphone.online/akun/?page=alamat""> 
+     <div class="menuakun" style="margin-top: 0px;"> 
+      <div class="textkiri">
+       Alamat
+      </div> 
+      <div class="textkanan2">
+       ›
+      </div>  
+     </div></a>
+     
+     <a href="https://pressphone.online/akun/?page=pin"> 
+     <div class="menuakun" style="margin-top: 0px;">  
+      <div class="textkiri">
+       Pin Transaksi
+      </div> 
+      <div class="textkanan">
+       Ubah
+      </div> 
+      <div class="textkanan2">
+       ›
+      </div>  
+     </div></a>
+     
+          <a href="https://pressphone.online/digital/138057"> 
+     <div class="menuakun" style="margin-top: 0px;"> 
+      <div class="textkiri">
+       Pengaturan
+      </div> 
+      <div class="textkanan2">
+       ›
+      </div>  
+     </div></a>
+
+ <p class="tittlemenu">Informasi Umum</p>
+     
+     <a href="https://pressphone.online/digital/265926"> 
+     <div class="menuakun" style="margin-top: 0px;"> 
+      <div class="textkiri">
+       Price List
+       </div>       
+      <div class="textkanan2">
+       ›
+      </div>   
+     </div></a>
+     
+     <a href="https://pressphone.online/akun/?page=chat"> 
+     <div class="menuakun" style="margin-top: 0px;"> 
+      <div class="textkiri">
+       Komplain & Bantuan
+       </div>       
+      <div class="textkanan2">
+       ›
+      </div>   
+     </div></a>
+     
+          <a href="https://pressphone.online/digital/138056"> 
+     <div class="menuakun" style="margin-top: 0px;"> 
+      <div class="textkiri">
+       Testimoni Aplikasi
+      </div>       
+      <div class="textkanan2">
+       ›
+      </div>   
+     </div></a>
+     
+          <a href="https://pressphone.online/digital/138102"> 
+     <div class="menuakun" style="margin-top: 0px;"> 
+      <div class="textkiri">
+       Kebijakan Privasi
+      </div>       
+      <div class="textkanan2">
+       ›
+      </div>   
+     </div></a>
+     
+          <a href="https://pressphone.online/digital/261798"> 
+     <div class="menuakun" style="margin-top: 0px;"> 
+      <div class="textkiri">
+       Update Aplikasi
+      </div>       
+      <div class="textkanan2">
+       ›
+      </div>   
+     </div></a>
+     
+       <a href="https://pressphone.online/digital/138058"> 
+     <div class="menuakun" style="margin-top: 0px;"> 
+      <div class="textkiri">
+       Tentang Aplikasi
+      </div> 
+      <div class="textkanan2">
+       ›
+      </div>  
+     </div></a> 
+     
+ <p style="margin-left:6px;margin-top: 30px;margin-bottom: 10px;font-weight: 500;font-family: 'arial', sans-serif;color: #595959;background:#f1f1f1;font-size: 12px;"
+ ></p>
+   
+    <a href="https://pressphone.online/digital/138059"> 
+     <div class="menuakun" style="margin-top: 0px;"> 
+      <div style="color:red;" class="textkiri">
+       Keluar Aplikasi
+      </div> 
+      <div class="textkanan2">
+       <img style="border-radius: 0px;margin-top:-5px;margin-right:-20px;width:50px;" src="https://i.ibb.co/6w1HczH/IMG-1402.png">
+      </div>  
+     </div></a> 
+</p>
+</div>
+</div>
+     
+     
+</p>
+</div>
+</div>
+
+
+
+			
+			<div id="saldo_user"></div>						
+    <!-- Letakkan script dibagian paling bawah halaman -->
+    <script type="text/javascript">
+      function rubah(angka){
+        var reverse = angka.toString().split('').reverse().join(''),
+        ribuan = reverse.match(/\d{1,3}/g);
+        ribuan = ribuan.join('.').split('').reverse().join('');
+        return "Rp."+ribuan;
+      }
+      document.getElementById("saldo_user").innerText=rubah(document.getElementById("saldo_user").textContent);
+      console.log("Powered By Argapay");
+console.info("Telegram UserName = Argapay");                                console.log("Gunakan Console ini dengan baik tanpa merugikan orang lain atau pihak lain");
+                                console.info("Powered Argapay");
+                                console.info("whatsapp = 08123456789");              console.info("SERVER : [NORMAL][200] ;");
+    </script>

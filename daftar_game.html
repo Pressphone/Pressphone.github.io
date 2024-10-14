@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <style>
+* {
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color:#202A36;
+}
+
+a {
+	 text-decoration:none;
+	 -webkit-tap-highlight-color: transparent;
+}
+
+.header-games {
+  padding: 15px 13px;
+  position: fixed;
+  width:100%;
+  background-color:#263646;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.title-games {
+  margin: 0;
+  font-size: 21px;
+  color: #fff;
+}
+
+#value {
+	 float: right;
+	 margin-top:-35px;
+	 border:none;
+	 background: #fff;
+	 color: #263646;
+	 font-weight:600;
+	 padding: 10px 10px;
+	 outline: none;
+	 border-radius:5px;
+}
+
+.container--games {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 20px;
+  padding: 15px 9px;
+}
+
+.image--game {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card--game {
+  background-color: #263646;
+  border-radius: 8px;
+  padding: 10px 5px;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-position: center;
+  transition: 1s;
+}
+
+
+.title--card--game {
+  color: #fff;
+  margin-top: 8px;
+  text-align:center;
+}
+
+.deskripsi--card--game {
+  color: #fff;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.link--open--game {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.3px;
+  color: rgb(207, 130, 14);
+  background-color: black;
+  padding: 2px 10px;
+  width: 70%;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 300;
+  font-weight: 500;
+}
+
+.link--close--game {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.3px;
+  color: #ff000a;
+  background-color: black;
+  padding: 2px 10px;
+  width: 70%;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 300;
+  font-weight: 500;
+}
+
+.card--game:hover {
+  background-color: #263646;
+  background-color: #263646;
+  background-image: radial-gradient(circle, transparent 1%, #263646 1%);
+  background-position: center;
+  background-size: 15000%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.card--game:hover :is(.text_token, .harga_token) {
+  color: #fff;
+}
+
+.card--game:active {
+  transition: background 0s;
+  background-color: #fff;
+  background-size: 200%;
+  background-height:100%;
+}
+
+
+@media (max-width: 375px) {
+  .title--card--game,
+  .deskripsi--card--game {
+    font-size: 10px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 340px) {
+  .card--game {
+    padding: 10px 5px;
+  }
+}
+
+@media (max-width: 340px) {
+  .card--game {
+    padding: 10px 5px;
+  }
+}
+
+@media (max-width: 290px) {
+  .card--game {
+    padding: 5px 8px;
+  }
+  .title--card--game,
+  .deskripsi--card--game {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 435px) {
+  .title--card--game,
+  .deskripsi--card--game {
+    font-size: 10px;
+    font-weight: 500;
+  }
+  .card--game {
+    padding: 10px 5px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .container--games {
+    margin-top: 15px;
+    padding: 0 40px;
+    gap: 30px;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .title--card--game,
+  .deskripsi--card--game {
+    font-size: 13px;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <header class="header-games">
+      <h2 class="title-games">Games</h2>
+      <input type="text" id="value" placeholder="Cari game favorit kamu">
+    </header>
+    <br />
+    <br />
+    <section class="container container--games">
+      <!-- Kalo mau tambah kategori baru, copy dari div class="card--game" dibawah ini -->
+      <div class="profile card--game">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1635831739-icon-appicon_ob30.jpg" alt="BLEACH Mobile 3D" class="image--game" />
+   <span class="name title--card--game">Free Fire</span>
+        <a href="https://pressphone.online/digital/135571" class="link--open--game">Open</a>
+      </div>
+      <!-- Sampai penutup div diatas, itu menambah 1 kategori -->
+      <div class="profile card--game">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLyGBTVmuvfLLNOrnvhkl3vq8gl7mvGzgfBg&usqp=CAU" alt="BLEACH Mobile 3D" class="image--game" />
+   <p class="name title--card--game">Genshin Impact</p>
+        <a href="https://pressphone.online/digital/139333" class="link--open--game">Open</a>
+      </div>
+      
+      <div class="profile card--game">
+        <img src="https://i.ibb.co/5BWNK4g/images-62.jpg" alt="Point Blank" class="image--game" />
+   <p class="name title--card--game">Point Blank</p>
+        <a href="https://pressphone.online/digital/135713" class="link--open--game">Open</a>
+      </div>
+      <div class="profile card--game">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfENxquZxyAPIYBa_VPn05JFcsdbFUAR6mOQ&usqp=CAU" alt="BLEACH Mobile 3D" class="image--game" />
+   <p class="name title--card--game">Mobile Legends</p>
+        <a href="https://pressphone.online/digital/137665" class="link--open--game">Open</a>
+      </div>
+      <div class="profile card--game">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcFI228XjBx1aeT0fI_zABfblEyFhyX8di_w&usqp=CAU" alt="BLEACH Mobile 3D" class="image--game" />
+   <p class="name title--card--game">Call Of Duty</p>
+        <a href="https://pressphone.online/digital/135575" class="link--open--game">Open</a>
+      </div>
+      <div class="profile card--game">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1Fay9olWtT5JF9LgN9WmzUyZ3HbYAl-xjWA&usqp=CAU" alt="BLEACH Mobile 3D" class="image--game" />
+   <p class="name title--card--game">Arena Of Valor</p>
+        <a href="https://pressphone.online/digital/135704" class="link--open--game">Open</a>
+      </div>
+       <div class="profile card--game">
+        <img src="https://play-lh.googleusercontent.com/Fx0NDO3ZlqxtwW9QpsiSOTNGpFrX3tQXnmrDfIbwKPWPl0uUUJUDvlkZiQg-_AXl4d8_" alt="BLEACH Mobile 3D" class="image--game" />
+   <p class="name title--card--game">HIGS DOMINO</p>
+          <a href="https://pressphone.online/digital/135646" class="link--open--game">Open</a>
+      </div>
+      <div class="profile card--game">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1592228250-icon-pubgm.jpg" alt="BLEACH Mobile 3D" class="image--game" />
+   <p class="name title--card--game">PUBG Mobile</p>
+        <a href="https://pressphone.online/digital/139327" class="link--open--game">Open</a>
+      </div>
+      <div class="profile card--game">
+        <img src="https://cdn1.codashop.com/S/content/mobile/images/product-tiles/supersus_tile.png" alt="BLEACH Mobile 3D" class="image--game" />
+   <p class="name title--card--game">Supersus</p>
+        <a href="#" class="link--close--game">Close</a>
+      </div>
+      <div class="profile card--game">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1579505414-icon-lifeafter.jpg" alt="BLEACH Mobile 3D" class="image--game" />
+   <p class="name title--card--game">Life After</p>
+       <a href="#" class="link--close--game">Close</a>
+      </div>
+      <div class="profile card--game">
+        <img src="https://cdn1.codashop.com/S/content/mobile/images/product-tiles/SausageMan_640x241.png" alt="BLEACH Mobile 3D" class="image--game" />
+   <p class="name title--card--game">Sausage Man</p>
+        <a href="#" class="link--close--game">Close</a>
+      </div>
+      <div class="profile card--game">
+        <img src="https://cdn1.codashop.com/S/content/mobile/images/product-tiles/ragnarok_x_tile.jpg" alt="BLEACH Mobile 3D" class="image--game" />
+   <p class="name title--card--game">Ragnarok</p>
+        <a href="#" class="link--close--game">Close</a>
+      </div>
+      
+     <script>
+  				document.getElementById("value").addEventListener("keyup", filterSearch);
+function filterSearch(){
+   var value,name,profile,i;
+   value = document.getElementById('value').value.toUpperCase();
+profile = document.getElementsByClassName('profile');
+  for(i=0;profile.length;i++){
+    name = profile[i].getElementsByClassName('name');
+    if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
+      profile[i].style.display ="flex";
+    }else{
+      profile[i].style.display = "none";
+    }
+  }  
+}
+  </script>
+  </body>
+</html>

@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+       <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+     <style type="text/css" media="all">
+        .bgslideMenu {
+  width: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.sliderMenu {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  background-image: linear-gradient(to bottom, #1D2733,  #15222A);
+}
+.sliderMenu::-webkit-scrollbar { width: 100%; margin-left: 0%; }
+.sliderMenu::-webkit-scrollbar-track { background-image: linear-gradient(to bottom, #1D2733,  #15222A); }
+
+/* MENU LAINYA */
+.menuLainya{
+  width: 100%;
+  height: auto;
+  margin-top: 10%;
+}
+.menu{
+  width: 100%;
+  margin-top: 5%;
+}
+.menu hr{
+  background-color: rgb(210,210,210);
+}
+#jarakHr{
+  background-color: rgb(210,210,210);
+  width: 100%;
+  height: 7px;
+}
+
+.menu h1{
+  font-size: 18px;
+  margin-left: 5%;
+  margin-top: 10%;
+  color:white;
+}
+.menuKonten {
+  width: 25%;
+  height: auto;
+  float: left;
+  text-align: center;
+}
+.menuKonten img{
+  width: 50px;
+  height:60px;
+  height: auto;
+}
+.menuKonten h2{
+  font-size: 12px;
+  opacity: 0.6;
+  font-weight: normal;
+  margin-top: 7%;
+  color:white;
+}
+.menuSliderkonten{
+  width: auto;
+  margin-top: 5%;
+  margin-bottom: -5%;
+}
+.kontenMenuPilihan{
+  width:100%;
+  margin-right: 1%;
+}
+.kontenMenuPilihan h1{
+  text-align: center;
+  width: 150px;
+  font-size: 14px;
+  background-color: white;
+  margin-left: 5%;
+  margin-right: 10%;
+  border-radius: 50px;
+  margin-top:10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid black;
+  opacity: 0.8;
+}
+#menuPilihan1{
+  background-color: red;
+  color: white;
+}
+     </style>
+    <title>Tagihan & Pascabayar</title>
+    <body style="background-color: #111B21;">
+
+<section class="menuSliderkonten">
+  <div class="bgslideMenu">
+    <div class="sliderMenu">
+      <div class="kontenMenuPilihan">
+        <h1 id="menuPilihan1" onclick="klik1()" >All Pembayaran</h1>
+      </div>
+      <div onclick="klik2()" class="kontenMenuPilihan">
+        <h1 id="menuPilihan2">Internet</h1>
+      </div>
+      <div onclick="klik3()" class="kontenMenuPilihan">
+        <h1 id="menuPilihan3">Telephone</h1>
+      </div>
+      <div onclick="klik4()" class="kontenMenuPilihan">
+        <h1 id="menuPilihan4">BPJS</h1>
+      </div>
+      <div onclick="klik5()" class="kontenMenuPilihan">
+        <h1 id="menuPilihan5">TV Pascabayar</h1>     
+        </div>    
+       <div onclick="klik6()" class="kontenMenuPilihan">
+        <h1 id="menuPilihan6">Multifinance</h1>
+  </div> 
+      <div onclick="klik7()" class="kontenMenuPilihan">
+        <h1 id="menuPilihan7">PDAM</h1>
+  </div> 
+    
+</section>
+  
+
+<section class="menuLainya">
+  <div id="menu1" class="menu">
+  				<div style="clear:both;">
+  </div>
+    <h1>Internet Pascabayar</h1>
+    <hr />
+    <div onclick="link('https://pressphone.online/digital/140270')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/yBhmK7I.png" alt="" />
+      <h2>Indi Home</h2>
+    </div>
+    
+     <div onclick="link('https://pressphone.online/digital/140477')" class="menuKonten">
+      <img style="border-radius:50%;" src="https://i.imgur.com/LpZMFgg.jpeg" alt="" />
+      <h2>My Republic</h2>
+    </div>
+    
+     <div onclick="link('https://pressphone.online/digital/140493')" class="menuKonten">
+      <img style="border-radius:50%;" src="https://i.imgur.com/2rsp4nB.jpeg" alt="" />
+      <h2>CBN</h2>
+    </div>
+    <div style="clear:both;">
+  </div> 
+  </div>
+  
+   
+  <div id="menu2" class="menu">
+    <h1>Telephone Pascabayar</h1>
+    <hr />
+    <div onclick="link('https://pressphone.online/digital/140947')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/7hNwR0C.jpeg" alt="" />
+      <h2>Hallo</h2>
+    </div>
+    
+   <div onclick="link('https://pressphone.online/digital/140948')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/vaVwWdh.jpeg" alt="" />
+      <h2>Matrix</h2>
+    </div>
+    
+    <div onclick="link('https://pressphone.online/digital/140950')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/0G4PfNE.jpeg" alt="" />
+      <h2>Smartfren</h2>
+    </div>
+    
+    <div onclick="link('https://pressphone.online/digital/140951')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/P4LNDdH.jpeg" alt="" />
+      <h2>Three</h2>
+    </div>
+    
+    <div onclick="link('https://pressphone.online/digital/140952')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/P7RzAy7.jpeg" alt="" />
+      <h2>XL</h2>
+    </div>
+       
+  </div>
+  <div style="clear:both;">
+  </div>
+  
+  <div id="menu3" class="menu">
+    <h1>BPJS</h1>
+    <hr />
+    <div onclick="link('https://pressphone.online/digital/140953')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/s1eYcK3.png" alt="" />
+      <h2>Kesehatan</h2>
+    </div>
+       
+  </div>
+  <div style="clear:both;">
+  </div>
+
+  <div id="menu4" class="menu">
+    <h1>TV Pascabayar</h1>
+    <hr />
+    <div onclick="link('https://pressphone.online/digital/141035')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/NvdE8ch.jpeg" alt="" />
+      <h2>Firstmedia</h2>
+    </div>
+    
+   <div onclick="link('https://pressphone.online/digital/141036')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/bnLgPQM.jpeg" alt="" />
+      <h2>Indovision</h2>
+    </div>
+    
+    <div onclick="link('https://pressphone.online/digital/141038')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/PgfTQIw.png" alt="" />
+      <h2>Telkomvision</h2>
+    </div>
+       
+  </div>
+  <div style="clear:both;">
+  </div>
+  
+  <div id="menu5" class="menu">
+    <h1>Multifinance</h1>
+    <hr />
+    <div onclick="link('https://pressphone.online/digital/141042')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/MjKydwz.jpeg" alt="" />
+      <h2>Aeon Cicilan</h2>
+    </div>
+    
+   <div onclick="link('https://pressphone.online/digital/141045')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/91USk6K.jpeg" alt="" />
+      <h2>Columbia Cicilan</h2>
+    </div>
+    
+    <div onclick="link('https://pressphone.online/digital/141220')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/IWo9soq.jpeg" alt="" />
+      <h2>ITC <br> Multifinance</h2>
+    </div>
+    
+    <div onclick="link('https://pressphone.online/digital/141221')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/uv5QJWn.jpeg" alt="" />
+      <h2>Artaprima <br> Finance</h2>
+    </div>
+    
+    <div onclick="link('https://pressphone.online/digital/141222')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/QBKDi5Z.jpeg" alt="" />
+      <h2>BCA Multifinance</h2>
+    </div>
+    
+    <div onclick="link('https://pressphone.online/digital/141223')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/xH1trGe.jpeg" alt="" />
+      <h2>Buana Finance</h2>
+    </div>    
+     
+    <div onclick="link('https://pressphone.online/digital/141224')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/RZxQLOL.jpeg" alt="" />
+      <h2>CIMB <br> Niaga JCB</h2>
+    </div>     
+       
+    <div onclick="link('https://pressphone.online/digital/141225')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/7B7ZrUy.jpeg" alt="" />
+      <h2>CIMB <br> Niaga Visa</h2>
+    </div>       
+      
+    <div onclick="link('https://pressphone.online/digital/141226')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/tkh7god.jpeg" alt="" />
+      <h2>Clipan <br> Finance</h2>
+    </div>      
+       
+    <div onclick="link('https://pressphone.online/digital/141227')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/EBgSdgK.jpeg" alt="" />
+      <h2>Heksa Insuranse <br> Premi Lanjutan</h2>
+    </div>  
+    
+    <div onclick="link('https://pressphone.online/digital/141228')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/KLdx2ow.png" alt="" />
+      <h2>Home Kredit</h2>
+    </div>
+    
+    <div onclick="link('https://pressphone.online/digital/141229')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/7d3YVvO.jpeg" alt="" />
+      <h2>Jaccs MPM <br>Finance</h2>
+    </div>   
+    
+    <div onclick="link('https://alpaydigital.webtoko.net/digital/131215')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/Dcqu0QF.jpeg" alt="" />
+      <h2>MNC Finance</h2>
+    </div>  
+    
+    <div onclick="link('https://alpaydigital.webtoko.net/digital/131215')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/hTD3poy.jpeg" alt="" />
+      <h2>Mega Auto <br> Finance</h2>
+    </div> 
+    
+    <div onclick="link('https://alpaydigital.webtoko.net/digital/131215')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/xPs3kzS.jpeg" alt="" />
+      <h2>Mega Central <br>Finance</h2>
+    </div>  
+
+<div onclick="link('https://alpaydigital.webtoko.net/digital/131215')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/JC7jbAw.jpeg" alt="" />
+      <h2>Mega <br> Finance</h2>
+    </div>       
+    
+    <div onclick="link('https://alpaydigital.webtoko.net/digital/131215')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/sRE4ykW.jpeg" alt="" />
+      <h2>Multiindo Auto <br> Finance</h2>
+    </div>                   
+       
+<div onclick="link('https://alpaydigital.webtoko.net/digital/131215')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/V1BpTPO.png" alt="" />
+      <h2>NSC Finance</h2>
+    </div>              
+       
+<div onclick="link('https://alpaydigital.webtoko.net/digital/131215')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/jxjS6kl.jpeg" alt="" />
+      <h2>Premi Jiwasraya</h2>
+    </div>              
+       
+  </div>
+  <div style="clear:both;">
+  </div>
+ 
+  
+  <div id="menu6" class="menu">
+    <h1>PDAM</h1>
+    <hr />
+    <div onclick="link('https://pressphone.online/digital/147455')" class="menuKonten">
+      <img style="border-radius:50%;background-color:black;" src="https://i.imgur.com/CfkNkpf.jpeg" alt="" />
+      <h2>PDAM</h2>
+    </div>
+       
+  </div>
+  <div style="clear:both;">
+  </div>
+  <br>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script type="text/javascript" charset="utf-8">
+      
+
+
+let menu1 = document.getElementById('menu1');
+let menu2 = document.getElementById('menu2');
+let menu3 = document.getElementById('menu3');
+let menu4 = document.getElementById('menu4');
+let menu5 = document.getElementById('menu5');
+let menu6 = document.getElementById('menu6');
+let menu7 = document.getElementById('menu7');
+
+let pilihan1 = document.getElementById('menuPilihan1');
+let pilihan2 = document.getElementById('menuPilihan2');
+let pilihan3 = document.getElementById('menuPilihan3');
+let pilihan4 = document.getElementById('menuPilihan4');
+let pilihan5 = document.getElementById('menuPilihan5');
+let pilihan6 = document.getElementById('menuPilihan6');
+let pilihan7 = document.getElementById('menuPilihan7');
+
+
+function klik1() {
+    pilihan1.style = "background-color: red; color: white;";
+    pilihan2.style = "background-color: white;";
+    pilihan3.style = "background-color: white;";
+    pilihan4.style = "background-color: white;";
+    pilihan5.style = "background-color: white;";
+    pilihan6.style = "background-color: white;";
+    pilihan7.style = "background-color: white;";    
+    menu1.style.display = "block";
+    menu2.style.display = "block";
+    menu3.style.display = "block";
+    menu4.style.display = "block";
+    menu5.style.display = "block";
+    menu6.style.display = "block";
+}
+function klik2() {
+    pilihan1.style = "background-color: white; color: black;";
+    pilihan2.style = "background-color: red; color: white;";
+    pilihan3.style = "background-color: white;";
+    pilihan4.style = "background-color: white;";
+    pilihan5.style = "background-color: white;";
+    pilihan6.style = "background-color: white;";
+    pilihan7.style = "background-color: white;";    
+    menu2.style.display = "none";
+    menu1.style.display = "block";
+    menu3.style.display = "none";
+    menu4.style.display = "none";
+    menu5.style.display = "none";
+    menu6.style.display = "none";
+}
+function klik3() {
+    pilihan1.style = "background-color: white; color: black;";
+    pilihan2.style = "background-color: white;";
+    pilihan3.style = "background-color: red; color: white;";
+    pilihan4.style = "background-color: white;";
+    pilihan5.style = "background-color: white;";
+    pilihan6.style = "background-color: white;";
+    pilihan7.style = "background-color: white;";
+    menu2.style.display = "block";
+    menu1.style.display = "none";
+    menu3.style.display = "none";
+    menu4.style.display = "none";
+    menu5.style.display = "none";
+    menu6.style.display = "none";
+}
+
+function klik4() {
+    pilihan1.style = "background-color: white; color: black;";
+    pilihan2.style = "background-color: white;";
+    pilihan3.style = "background-color: white;";
+    pilihan4.style = "background-color: red; color: white;";
+    pilihan5.style = "background-color: white;";
+    pilihan6.style = "background-color: white;";
+    pilihan7.style = "background-color: white;";    
+    menu2.style.display = "none";
+    menu1.style.display = "none";
+    menu3.style.display = "block";
+    menu4.style.display = "none";
+    menu5.style.display = "none";
+    menu6.style.display = "none";
+}
+
+function klik5() {
+    pilihan1.style = "background-color: white; color: black;";
+    pilihan2.style = "background-color: white;";
+    pilihan3.style = "background-color: white;";
+    pilihan4.style = "background-color: white;";
+    pilihan5.style = "background-color: red; color: white;";
+    pilihan6.style = "background-color: white;";
+    pilihan7.style = "background-color: white;";    
+    menu2.style.display = "none";
+    menu1.style.display = "none";
+    menu3.style.display = "none";
+    menu4.style.display = "block";
+    menu5.style.display = "none";
+    menu6.style.display = "none";
+}
+
+function klik6() {
+    pilihan1.style = "background-color: white; color: black;";
+    pilihan2.style = "background-color: white;";
+    pilihan3.style = "background-color: white;";
+    pilihan4.style = "background-color: white;";
+    pilihan5.style = "background-color: white;";
+    pilihan6.style = "background-color: red; color: white;";
+    pilihan7.style = "background-color: white;";    
+    menu2.style.display = "none";
+    menu1.style.display = "none";
+    menu3.style.display = "none";
+    menu4.style.display = "none";
+    menu5.style.display = "block";
+    menu6.style.display = "none";
+}
+function klik7() {
+    pilihan1.style = "background-color: white; color: black;";
+    pilihan2.style = "background-color: white;";
+    pilihan3.style = "background-color: white;";
+    pilihan4.style = "background-color: white;";
+    pilihan5.style = "background-color: white;";
+    pilihan6.style = "background-color: white;";
+    pilihan7.style = "background-color: red; color: white;";
+    menu2.style.display = "none";
+    menu1.style.display = "none";
+    menu3.style.display = "none";
+    menu4.style.display = "none";
+    menu5.style.display = "none";
+    menu6.style.display = "block";
+}
+
+function link(url) {
+  window.location.href = url;
+}
+      
+      
+    </script>
+    <script src="js.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1348 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@600;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<style type="text/css">*
+.container1{
+  z-index:25;
+  background:red;
+  background: linear-gradient(white,white);
+  position: fixed;
+  width:100%;
+  height: 45px;
+  opacity:90%;
+  box-shadow: 0.6px 0.8px 6px -1.5px rgba(0,0,0,0.6);
+  top:0px;
+  left:0px;
+}
+.container2{
+  z-index:30;
+  background:red;
+  background:linear-gradient(red,red);
+  position: absolute;
+  width:100%;
+  height: 45px;
+  top:0;
+  left:0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  box-shadow: 0.6px 0.6px 4px -1.5px rgba(0,0,0,0.4);
+}
+.header{
+  padding-bottom: 10px;
+  left: -30px;
+  padding: 15px;
+  z-index: 1;
+  border-radius: 10px;
+  position-bottom: absolute;
+  background: #ff000a;
+}
+.garis{ border-left: 1px solid #ff000a ;
+ height: 38px; width: 0px; 
+margin-top: -32px;
+  margin-left: 50%;
+}   
+				* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  z-index:30;
+  height:30px;
+  padding-left:25px;
+  color: black;
+  font-size: 12px;
+  float: left;
+  width: auto;
+  border:none;
+  border-radius:10px;
+  background: #eaeaea;
+  top: 7px;
+  left:40px;  
+  position:fixed;
+}
+
+form.example button {
+  z-index:30;
+  float: left;
+  width: auto;
+  padding: 0px;
+  background: transparent;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  top:12px;
+  left:45px;
+  position: fixed;
+}
+
+form.example button:hover {
+  background: #eaeaea;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.button7{
+				pading:0px;
+				height: 30px;
+				
+}
+.chat{
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+  z-index: 30;
+  border-radius: 0px;
+  right: 10px;
+  width:24px;
+  top: 9px;
+  position: fixed;
+}
+.icon-button__chat {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  width: 17px;
+  height: 17px;
+  background: #000000;
+  color: #ffffea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  font-size:8px;
+}
+.notifikasi{
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+  z-index: 30;
+  border-radius: 0px;
+  right: 43px;
+  width:26px;
+  top: 9px;
+  position: fixed;
+}
+.icon-button__notif {
+  position: absolute;
+  top: 3px;
+  right: 40px;
+  width: 17px;
+  height: 17px;
+  background: #000000;
+  color: #ffffea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  font-size:8px;
+}
+.keranjang{
+ box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+ z-index: 30;
+ border-radius: 0px;
+ float:right;
+ right: 80px;
+ width:26px;
+ top: 7px;
+ position: fixed;
+}
+.icon-button__keranjang {
+  position: absolute;
+  top: 3px;
+  right: 72px;
+  width: 17px;
+  height: 17px;
+  background: #000000;
+  color: #ffffea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  font-size:8px;
+}
+.menu {
+  width:auto;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+  z-index: 30;
+  border-radius: 0px;
+  left: 6px;
+  width:26px;
+  top: 8px;
+  position: fixed;
+}
+/* pay protect */
+.bgprotek{
+  margin-top: 10px;
+  margin-left: 0;
+  width: 96%;
+  height: 50px;
+  background-color: white;
+  border-radius: 25px 25px 25px 25px;
+  margin-bottom: 10px;
+}
+.imgprotect{
+  width: 70%;
+  height: 45px;
+  margin-bottom: 5px;
+  float: left;
+}
+.imgbantuan{
+  width: 25%;
+  height: 40px;
+  float: right;
+  text-align: center;
+}
+.imgbantuan p{
+  font-size: 14px;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border: 2px solid #26a69a;
+  color: #26a69a ;
+  border-radius: 5px;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+
+.imgprotect img{
+  width: 50%;
+  height: 45px;
+  margin-left: 8px;
+  margin-top: 8px;
+  float: left;
+}
+.imgket{
+  width: 30%;
+  height: 55px;
+  float: left;
+  margin-left: 2.5%;
+}
+.imgket img{
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  float: left;
+  margin-right: 3px;
+}
+.imgket p{
+  font-size: 20%;
+  margin-top:15px;
+}
+* {
+  box-sizing: border-box;  
+}
+
+* {
+margin: 0px;
+margin-top: -1px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color:white;
+}
+
+a {
+	 text-decoration:none;
+	 -webkit-tap-highlight-color: transparent;
+}
+
+.smalltext{
+	padding-top: 0px;
+	font-size: 16px;
+	margin-left: 23px;
+  text-shadow: 0px 0px #414141;
+  margin-bottom: -20;
+}
+.nama {
+      flex: auto;
+      text-decoration: none;
+      outline: none;
+      color: #000;
+      border: none;
+      width: 100%;
+      font-size: 10.5px;
+      font-family: 'Urbanist', sans-serif;
+      margin-top: 3px;
+    }
+
+.judulbesar{
+    margin-left:10px;
+    font-weight: bold;
+    font-family: 'Verdana', sans-serif;
+    color: #ff0a00;
+    font-size: 24px; 
+    margin-top: 10px;
+    margin-bottom: 1px;
+    }
+    
+* {
+  box-sizing: border-box;
+  
+}
+a {
+	 text-decoration:none;
+	 -webkit-tap-highlight-color: transparent;
+}
+
+
+.title-games {
+  margin: 0;
+  font-size: 21px;
+  color: black;
+}
+
+#value {
+	 z-index:30;
+  height:30px;
+  padding-left:25px;
+  color: black;
+  font-size: 12px;
+  float: left;
+  width: auto;
+  border:none;
+  border-radius:10px;
+  background: #eaeaea;
+  top:7px;
+  left:40px;  
+  position:fixed;  
+}
+.container--games {
+  position:absolute;
+  margin-top:10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  float:left;
+  gap: 10px;
+  padding: 10px 10px;
+}
+.image--game {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.card--game {
+  background-color:white;
+  border-radius: 8px;
+  padding: 10px 5px;
+  height:auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  background-position: center;
+  transition: 1s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+
+}
+
+.title--card--game {
+  color: black;
+  margin-top: 0px;
+  left:0%;
+  font-weight: 500;  
+  font-size:0.85rem; 
+}
+.harga--card--game {
+  color: black;
+  margin-top:10px;
+  font-size:10px; 
+}
+.stokready--card--game {
+  color: green;
+  margin-top:10px;
+  font-weight: 300;
+}
+.stokhabis--card--game {
+  color: red;
+  margin-top:10px;
+  font-weight: 300;
+}
+.deskripsi--card--game {
+  color: grey;
+  margin-top:0px;
+  font-weight: 300;
+}
+.cabang--card--game {
+  color: grey;
+  margin-top:10px;
+  margin-bottom:auto;
+  font-weight: 300;
+  font-size:0.75rem; 
+}
+
+.card--game:hover {
+  margin-top:-40px;
+  background-color: white;
+  background-color: white;
+  background-image: radial-gradient(circle, transparent 1%, red 1%);
+  background-position: center;
+  background-size: 59000%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.card--game:hover :is(.text_token, .harga_token) {
+  color: #fff;
+}
+
+.card--game:active {
+  transition: background 0s;
+  background-color: #fff;
+  background-size: 200%;
+  background-height:100%;
+}
+
+
+@media (max-width: 375px) {
+  .title--card--game,
+  .deskripsi--card--game {
+    font-size: 10px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 340px) {
+  .card--game {
+    padding: 10px 5px;
+  }
+}
+
+@media (max-width: 340px) {
+  .card--game {
+    padding: 10px 5px;
+  }
+}
+
+@media (max-width: 290px) {
+  .card--game {
+    padding: 5px 8px;
+  }
+  .title--card--game,
+  .deskripsi--card--game {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 435px) {
+  .title--card--game,
+  .deskripsi--card--game {
+    font-size: 10px;
+    font-weight: 500;
+  }
+  .card--game {
+    padding: 10px 5px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .container--games {
+    margin-top: 15px;
+    padding: 0 40px;
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .title--card--game,
+  .deskripsi--card--game {
+    font-size: 13px;
+  }    
+
+</style>
+<header>
+<!--WARNA BELAKANG HEADER-->
+<div class="container1">
+</div>
+<!-- AKHIR -->
+<div class="container2">
+      
+      <!-- SERCH BOX -->
+<form class="example" action="https://pressphone.online/search/?q=">
+  <input type="text" style="z-index:30;position:fixed;width:45%;"  placeholder="iPhone 13 Pro Max" name="q">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+
+<a onclick="httpkiosidbukaolshopsiteakunlogin()">
+    <img class="menu" src="https://i.imgur.com/tPpUG5Q.png">
+    </a>
+</div>			
+
+<!-- AKHIR -->
+  
+<!-- ICON KERANJANG -->
+<a href="https://pressphone.online/cart/">  
+    <span class="icon-button__keranjang" style="z-index:30;position:fixed"><center>{{total_cart}}</center></span>
+<img class="keranjang" src="https://i.imgur.com/lP3Zjep.png"></a>
+
+<!-- ICON LONCENG -->
+<a href="https://pressphone.online/akun/?page=notifikasi">     			    <span class="icon-button__notif" style="z-index:30;position:fixed"><center>{{total_notif}}</center></span>
+<img class="notifikasi" src="https://i.imgur.com/GNlAmI6.png"></a>
+
+<!-- ICON CUSTOMER SUPPORT -->
+<a href="https://pressphone.online/akun/?page=chat"> 
+    <span class="icon-button__chat" style="z-index:30;position:fixed"><center>{{total_pesan}}</center></span>
+<img class="chat" src="https://i.imgur.com/UyMzfed.png"></a>
+
+ </div></div>
+ </header> 
+ <body>
+<center>
+<!-- BANNER SLIDE -->
+<div style="width:100%;height:auto;margin-top:46px;margin-bottom:0px">
+
+<a href="#">
+				<img class="banner-slide" src="https://i.imgur.com/fXF55dD.png" style="width:100%;height:auto" alt=""></a>
+
+<a href="#">
+				<img class="banner-slide" src="https://i.imgur.com/GNhH0dC.png" style="width:100%;height:auto" alt=""></a>
+				
+<a href="#">
+				<img class="banner-slide" src="https://i.imgur.com/QkRyaay.png" style="width:100%;height:auto" alt=""></a>
+				
+<a href="#">
+				<img class="banner-slide" src="https://i.imgur.com/ZchFXKg.png" style="width:100%;height:auto" alt=""></a>
+</div>	
+		
+</center>
+    
+
+<hr style="height:9px;border-width:0;background-color:#d1d1d1;opacity:0.4">
+
+<script>var myIndex = 0;carousel();function carousel() {var i; var x =document.getElementsByClassName("banner-slide"); for (i = 0; i < x.length; i++) { x[i].style.display = "none";}myIndex++;if (myIndex > x.length) {myIndex = 1} x[myIndex-1].style.display = "block";setTimeout(carousel, 4000); }</script><!-- END --><div class="space"></div>
+
+<center> 
+<div class="judulbesar">Temukan Unit Cepat</div>
+<div class="nama">      
+    <section class="container container--games">     
+      <!-- Pembuka produk -->
+      <div class="profile card--game">
+                <a href="https://pressphone.online/scan_barcode">      				
+        <img src="https://i.imgur.com/IJOopMB.png" alt="" class="image--game" />
+       
+        <div class="harga--card--game">Scan Barcode</div>
+            </a>    
+      </div>
+       <!-- Penutup produk -->       
+       
+             <!-- Pembuka produk -->
+      <div class="profile card--game">
+                <a href="https://pressphone.online/scan_qr">      				
+        <img src="https://i.imgur.com/g2bjyrS.png" alt="" class="image--game" />
+       
+        <div class="harga--card--game">Scan QR</div>
+            </a>    
+      </div>
+       <!-- Penutup produk -->       
+       
+             <!-- Pembuka produk -->
+      <div class="profile card--game">
+                <a href="https://pressphone.online/scan_all">      				
+        <img src="https://i.imgur.com/Qu9O3P7.png" alt="" class="image--game" />
+       
+        <div class="harga--card--game">Scan All</div>
+            </a>    
+      </div>
+       <!-- Penutup produk -->       
+      </div>
+</div>   
+<center> 
+  <!-- BAGIAN FORM SCAN --> 
+ <form action="" method="get" accept-charset="utf-8">
+     <div class="row mb-2">
+      <div class="col-100">
+       <input style="border:none;width:300px;" type="text" id="id" name="id" placeholder="Masukkan ID" aria-describedby="basic-ID" value="" class="{{hasil_scan}}" hidden/>                          </div>
+                    </form>                 
+                </div>
+            </div>  
+<p style="font-size:10px;width:95%;margin-top:40%;left:10px;border-radius:25px;">Setelah Scan Barcode / QR Tap Lanjutkan!</p>   
+         
+<div class="tabcontent" id="Codingasik1">
+<div class="container">
+    <div class="codingasik-container">
+
+	<div style="width:95%;height:40px;border-radius:20px;margin-top:5px;padding:5px 5px;background:red;" class="produk-codingasik" onclick="kirimData('{{hasil_scan}}')">
+     <!-- PRODUK 1 -->
+      <h2>Lanjutkan</h2>
+     </div>
+     </br>
+   </div>
+  </div>
+ </div>
+</center>
+</center>
+</body>
+
+
+<!-- Navbar Slide Kanan -->
+<script>
+function httpkiosidbukaolshopsiteakunlogin() {
+  document.getElementById("info2").style.width = "100%";
+}
+function httpkiosidbukaolshopsite() {
+  document.getElementById("info2").style.width = "0%";
+}
+</script>
+
+ <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+
+<style>
+      * {
+        box-sizing: border-box;
+      }
+      .container__blue__color {
+        width:0%;
+        height:100%;
+        left:0;
+        top:0;
+        background-image: linear-gradient(to bottom, #ff0b00,  #15222A);       
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px; 
+      }   
+.qiosscriptsaldo {
+ width:100%;
+ height:20%;
+ background-image: linear-gradient(to bottom, #ff0b00,  #15222A);
+ pading-top:1px;
+ padding-left:0px;
+ padding-right:0px; 
+ border-bottom-left-radius: 15px;
+ border-bottom-right-radius: 15px; 
+ box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.4);    
+ z-index:101;      
+}		      		       
+.qiosscript {
+ top:-10px;
+ height:105%;
+ left:0px;
+ background:#000000e7;  
+ width:0%;
+ overflow-x: hidden;
+ transition: 0.5s;
+ margin-left: 0px; 
+ z-index:1000;
+ position:fixed;       
+}		
+.qiosscriptsaldobawah {
+  background:white;
+  width:100%;
+  height:px;
+  border-radius:8px;
+  position:relatif;
+  margin-left:0px;
+  margin-bottom:5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  float:left;
+  gap: 5px;
+  padding: 5px 10px;
+  font-align:left;
+}		
+.colpoinsaldo {
+  background-color:white;
+  border-radius: 8px;
+  padding: 10px 5px;
+  height:auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  background-position: center;
+  transition: 1s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);  
+} 
+.colpoinsaldo:hover {
+  margin-top:-20px;
+  background-color: white;  
+  background-image: radial-gradient(circle, transparent 1%, red 1%);
+  background-position: center;
+  background-size: 100005%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.colpoinsaldo:hover :is(.text_token, .harga_token) {
+  color: #fff;
+}
+
+.colpoinsaldo:active {
+  transition: background 0s;
+  background-color: #fff;
+  background-size: 200%;
+  background-height:100%;
+}
+.pointmem{
+  font-weight: 600;
+  font-family: 'arial', sans-serif;
+  color: #000000;
+  font-size: 12px;
+  color: black;
+  margin-top: 0px;
+  left:0%;
+  font-weight: 500;  
+  font-size:0.85rem; 
+}  
+.nompoint{
+  font-weight: 600;
+  font-family: 'arial', sans-serif;
+  color: #000000;
+  font-size:16px;
+  color: black;
+  margin-top: 0px;
+  left:0%;
+  font-weight: 500;  
+  font-size:0.85rem; 
+}
+.saldomem{
+  font-weight: 600;
+  font-family: 'arial', sans-serif;
+  color: #000000;
+  font-size: 12px;
+  color: black;
+  margin-top: 0px;
+  left:0%;
+  font-weight: 500;  
+  font-size:0.85rem; 
+}
+.nomsaldo{
+  font-weight: 600;
+  font-family: 'arial', sans-serif;
+  color: #000000;
+  font-size: 16px;
+  color: black;
+  margin-top: 0px;
+  left:0%;
+  font-weight: 500;  
+  font-size:0.85rem; 
+}  
+.refresh { 
+  right:0px;
+  border-radius: 0px;
+  margin-top:-47px;
+  width:30px; 
+  z-index:102;  
+  position:absolute; 
+}                     
+.qiosscriptprofatas {
+  background:#ffffff60;
+  width:100%;
+  height:auto;  
+  border-radius:8px;
+  position:relatif;
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-left:0px;
+  margin-right:0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  float:left;  
+  gap: 0px;
+  padding: 0px 0px;
+  font-align:left;
+}		
+.qiosscriptprofatas:hover {
+  width:99%;
+  border-radius:100px;
+  background-color: #ffffff30;
+  background-image: radial-gradient(circle, transparent 1%, red 1%);
+  background-position: center;
+  background-size: 59000%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.qiosscriptprofatas:hover :is(.text_token, .harga_token) {
+  color: #ffffff60;
+}       	
+.colprofatas1 {
+  background-color:transparent;
+  border-radius:100px;
+  padding: 0px 0px;
+  width:100px;
+  height:auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  background-position: center;
+  transition: 1s;
+  box-shadow: none;  
+} 
+.colprofatas1:hover {
+  width:100px;
+  border-radius:100px;
+  background-color: transparent;
+  background-image: radial-gradient(circle, transparent 1%, red 1%);
+  background-position: center;
+  background-size: 59000%;
+  box-shadow: none;
+}
+
+.colprofatas:hover :is(.text_token, .harga_token) {
+  color: #ffffff60;
+}       	
+.colprofatas {
+  width:240px;
+  margin-left:10px;
+  background-color:transparent;
+  border-radius: 8px;
+  padding: 10px 5px;
+  height:auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  background-position: center;
+  transition: 1s;
+  box-shadow: none;  
+} 
+.colprofatas:hover {
+  width:240px;
+  background-color: transparent;
+  background-image: radial-gradient(circle, transparent 1%, red 1%);
+  background-position: center;
+  background-size: 59000%;
+  box-shadow: none;
+}
+
+.colprofatas:hover :is(.text_token, .harga_token) {
+  color: #ffffff60;
+}       
+
+      .qiosscriptprofatas namanya1 {
+       margin-top:5px;
+      	 position:relative;
+      	 font-size:12px;
+      	 color:white;
+      	 text-align:left;    
+      	 font-style:'urbanist'sans;  	     	 
+      	 border-radius:5px;      	
+      } 
+      .qiosscriptprofatas namanya2 {
+      	 position:relative;
+      	 font-size:10px;
+      	 color:white;
+      	 text-align:left;    
+      	 font-style:'urbanist'sans;  	     	 
+      	 border-radius:5px;
+      } 
+      .qiosscriptprofatas namanya3 {
+      	 position:relative;
+      	 font-size:10px;
+      	 color:white;
+      	 text-align:left;    
+      	 font-style:'urbanist'sans;  	     	 
+      	 border-radius:5px;
+      } 
+      .gambargg {
+       item-align:center;               
+       }		
+
+.menuakun {
+  width:100%;
+  height: 40px;
+  border-bottom: 1px solid #d1d1d1;
+  border-radius:5px;
+  background: #fff;
+box-shadow: rgb(220, 220, 233) 1px 1px 1px 1px;
+}
+.textkiri {
+  left:5px;
+  font-weight: 600;
+  font-family: 'arial', sans-serif;
+  color: #000000;
+  margin-top: 12px;
+  font-size: 12px;
+  display: inline;
+  background: transparent;
+  position: absolute;
+}  
+
+.textkanan {
+  margin-left:10px;
+  font-weight: 600;
+  font-family: 'arial', sans-serif;
+  margin-top: 15px;
+  right: 45px;
+  color: #000000;
+  font-size: 12px;
+  display: inline;
+  background: none;
+  position: absolute;
+}
+.textkanan2 {
+  margin-left:10px;
+  font-weight: 600;
+  font-family: 'arial', sans-serif;
+  margin-top: 5px;
+  right: 25px;
+  color: #000000;
+  font-size: 26px;
+  display: inline;
+  background: none;
+  position: absolute;
+}
+.texttengah { 
+  margin-top:-5px;
+  font-size:40px;
+  font-weight: 600;
+  font-family: 'arial', sans-serif;
+  color: #000000; 
+  background: none;
+  position: absolute;
+}
+.textjudulmenu{
+    text-align:left;
+    width:100%;  
+    margin-top:10px;
+    margin-left:5px;
+    margin-bottom:5px;
+    font-weight: 500;
+    font-family: 'arial', sans-serif;
+    color:white;
+    background:none;
+    font-size: 12px;
+}
+</style>
+<body>
+<div class="nama">    
+<div id="info2" class="qiosscript">  
+    <div class="qiosscriptsaldo">   
+<a style="color:black;text-decoration: none;" href="https://pressphone.online/akun/?page=profil">        
+      <section class="container qiosscriptprofatas">     
+      <!-- Pembuka produk -->
+      <div class="col-2">
+      <div class="profile colprofatas1">
+        <center>         
+<img class="gambarmenuakun" style="margin-top:5px;border-radius:50px;width:85%;border:5 1px 3px rgba(0, 0, 0, 0.4);position:relative;" src="{{foto_profil}}">        
+       </center>
+       </div>
+      </div>
+       <!-- Penutup produk -->       
+             
+        <!-- Pembuka produk -->
+         <div class="col-10">
+           <div class="profile colprofatas">
+           	<h1 class="namanya1">
+       	        {{nama_user}}
+            </h1> 
+            	<h1 class="namanya2">
+           	    {{nomor_telepon}}
+            	</h1>
+           	<h1 class="namanya3">
+           	    {{nama_membership}}
+           	</h1>
+          </div>
+         </div>
+       <!-- Penutup produk -->  
+      </section>      
+     </a>  
+           
+      <section class="container qiosscriptsaldobawah">     
+      <!-- Pembuka produk -->
+      <div class="profile colpoinsaldo">
+                <a href="https://pressphone.online/akun/?page=saldo_history">      				    
+        <div class="saldomem">Saldo Anda</div>
+        <div class="nomsaldo" id="saldo_user">{{saldo_user}}</div>
+            </a>    
+      </div>
+       <!-- Penutup produk -->       
+             
+        <!-- Pembuka produk -->
+      <div class="profile colpoinsaldo">
+                <a href="https://pressphone.online/akun/?page=poin">             
+           <div class="pointmem">{{nama_poin}}
+            </div>
+           <div class="nompoint">{{poin_member}}
+           </div>
+            </a>    
+      </div>
+       <!-- Penutup produk -->  
+      </section>      
+    
+    <div class="textjudulmenu">
+		 <p >Akun</p>
+		 </div>
+		 
+		     <a href="https://pressphone.online/digital/265876"> 
+     <div class="menuakun" style="margin-top: 0px;border-bottom-radius: 0px;"> 
+      <div class="textkiri">
+      Membership
+      </div> 
+      <div class="textkanan">
+       Upgrade
+      </div> 
+      <div class="textkanan2">
+       ›
+      </div> 
+     </div></a>
+     
+		 		
+    <a href="https://pressphone.online/digital/265887"> 
+     <div class="menuakun" style="margin-top: 0px;border-bottom-radius: 0px;"> 
+      <div class="textkiri">
+      Handphone
+      </div> 
+      <div class="textkanan2">
+       ›
+      </div> 
+     </div></a>
+     
+         <a href="https://pressphone.online/digital/132772"> 
+     <div class="menuakun" style="margin-top: 0px;border-bottom-radius: 0px;"> 
+      <div class="textkiri">
+      Pulsa & Paket Data
+      </div> 
+      <div class="textkanan2">
+       ›
+      </div> 
+     </div></a>
+     
+     <a href="https://pressphone.online/digital/135688"> 
+     <div class="menuakun" style="margin-top: 0px;"> 
+      <div class="textkiri">
+      PLN Pascabayar / Prabayar
+      </div> 
+      <div class="textkanan2">
+       ›
+      </div>       
+     </div></a>
+     
+          <a href="https://pressphone.online/digital/134893"> 
+     <div class="menuakun" style="margin-top: 0px;"> 
+      <div class="textkiri">
+      E-wallet
+      </div> 
+      <div class="textkanan2">
+       ›
+      </div>       
+     </div></a>
+     
+          <a href="https://pressphone.online/digital/132890"> 
+     <div class="menuakun" style="margin-top: 0px;"> 
+      <div class="textkiri">
+      Voucher Game
+      </div> 
+      <div class="textkanan2">
+       ›
+      </div>       
+     </div></a>
+     
+          <a href="https://pressphone.online/digital/140277"> 
+     <div class="menuakun" style="margin-top: 0px;"> 
+      <div class="textkiri">
+      Bayar Tagihan
+      </div> 
+      <div class="textkanan2">
+       ›
+      </div>       
+     </div></a>
+     
+ <p class="textjudulmenu">Keamanan</p>     
+                
+<a href="https://pressphone.online/akun/?page=alamat""> 
+     <div class="menuakun" style="margin-top: 0px;"> 
+      <div class="textkiri">
+       Alamat
+      </div> 
+      <div class="textkanan">
+       Ubah
+      </div> 
+      <div class="textkanan2">
+       ›
+      </div>  
+     </div></a>
+     
+     <a href="https://pressphone.online/akun/?page=pin"> 
+     <div class="menuakun" style="margin-top: 0px;">  
+      <div class="textkiri">
+       Pin Transaksi
+      </div> 
+      <div class="textkanan">
+       Ubah
+      </div> 
+      <div class="textkanan2">
+       ›
+      </div>  
+     </div></a>
+     
+          <a href="https://pressphone.online/digital/138057"> 
+     <div class="menuakun" style="margin-top: 0px;"> 
+      <div class="textkiri">
+       Pengaturan
+      </div> 
+      <div class="textkanan">
+       Ubah
+      </div>       
+      <div class="textkanan2">
+       ›
+      </div>  
+     </div></a>
+   
+    <a href="javascript:void(0)" onclick="httpkiosidbukaolshopsite()"> 
+     <div class="menuakun" style="margin-top: 0px;"> 
+      <div style="color:red;" class="textkiri">
+       Tutup
+      </div> 
+      <div class="textkanan2">
+       ›
+      </div>  
+     </div></a> 
+</p>
+</div>
+</div>     
+</div>  
+</div>             	          
+</div>              
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<style>
+.nav { 
+display: flex; 
+flex-direction: row; 
+width: 100%; 
+top: 93%; 
+background-color: #fff; 
+padding: 1px 0px; 
+border-top-left-radius: 30px; 
+border-top-right-radius: 30px; 
+box-shadow: 0px 5px 40px rgba(0,0,0,0.8);
+position:fixed;
+z-index:10;
+color: inherit;
+text-decoration: none;
+} 
+.nav-item { 
+display: flex; 
+justify-content: 
+center; align-items: 
+center; flex-grow: 1; 
+padding: 10px 18px; 
+cursor: pointer; 
+transition: all 0.2s ease-out;
+color: inherit;
+text-decoration: none;
+} 
+.nav-text { 
+font-size: 10px; 
+margin: auto; 
+text-align: center; 
+font-weight: 500; 
+display: none; 
+transition: all 0.3s ease;
+color: inherit;
+text-decoration: none;
+} 
+.material-icons { 
+display: inline; 
+font-size: 28px; 
+transition: color .3s;
+color: black;
+}
+.nav-item.active { 
+flex-grow: 3; 
+border-radius: 30px; 
+background: #eee; 
+justify-content: flex-start;
+} 
+.nav-item.active > 
+.nav-text { 
+display: inline-block;
+} 
+.nav-item.active > 
+.material-icons.home-icon { 
+color: #ff0a00;
+} 
+.material-icons.home-icon ~ 
+.nav-text { 
+color: #ff0a00;
+} 
+.nav-item.active > 
+.material-icons.dynamic_form-icon { 
+color: #ff0a00;
+} 
+.material-icons.dynamic_form-icon ~ 
+.nav-text { 
+color: #ff0a00;
+} 
+.nav-item.active > 
+.material-icons.dataset-icon { 
+color: #ff0a00;
+} 
+.material-icons.dataset-icon ~ 
+.nav-text { 
+color: #ff0a00;
+} 
+.nav-item.active > 
+.material-icons.category-icon { 
+color: #ff0a00;
+} 
+.material-icons.category-icon ~ 
+.nav-text { 
+color: #ff0a00;
+} 
+.nav-item.active > 
+.material-icons.person-icon { 
+color: #ff0a00;
+} 
+.material-icons.person-icon ~ 
+.nav-text { 
+color: #ff0a00;
+}
+</style>
+<a href="index.html">
+<div class="nav"> 
+    <div class="nav-item"> 
+        <i class="material-icons home-icon">home
+        </i> 
+  <span class="nav-text">Home</span> 
+  </div> 
+</a>
+<a href="product.html">
+<div class="nav-item"> 
+    <i class="material-icons dynamic_form-icon">dynamic_form 
+    </i> 
+  <span class="nav-text">Product</span> 
+</div>
+</a>
+<a href="QR.html">
+<div class="nav-item active"> 
+    <i class="material-icons dataset-icon"> dataset 
+    </i> 
+  <span class="nav-text">Scan QR</span> 
+</div> 
+</a>
+<a href="category.html">
+<div class="nav-item"> 
+    <i class="material-icons category-icon"> category 
+    </i> 
+  <span class="nav-text">Category</span> 
+</div>
+</a>
+<a href="myaccount.html">
+<div class="nav-item"> 
+    <i class="material-icons person-icon"> person 
+    </i> 
+  <span class="nav-text">Profile</span> 
+</div>
+</a>
+
+<script>
+    const navItems = document.getElementsByClassName('nav-item');
+    for (let i = 0; i < navItems.length; i++) { 
+    navItems[i].addEventListener('click', () => { for(let j = 0; j < navItems.length; j++) navItems[j].classList.remove('active'); navItems[i].classList.add('active'); 
+        });
+        }
+</script>
+
+
+ <!-- Letakkan script dibagian paling bawah halaman -->
+    <script type="text/javascript">
+      function rubah(angka){
+        var reverse = angka.toString().split('').reverse().join(''),
+        ribuan = reverse.match(/\d{1,3}/g);
+        ribuan = ribuan.join('.').split('').reverse().join('');
+        return "Rp."+ribuan;
+      }
+      document.getElementById("saldo_user").innerText=rubah(document.getElementById("saldo_user").textContent);
+    </script>
+  <script>
+  // bersihkan konten alert saat diklik oleh user
+  function clearData(e) {
+    document.getElementById('alertWarning').style.display = "none";
+  }
+  
+  // SIMPAN SEMUA HASIL CETAKAN DARI SEMUA FUNCTION KESINI
+  // CETAK NAMA BARANG
+   let cetakNama = document.getElementById("beliPulsa");
+   // CETAK HARGA BARANG
+   let cetakHarga = document.getElementById("HargaBarang");
+  // CETAK URL BARANG
+  let url = document.getElementById("linkUrl");
+  // CETAK NOMOR TUJUAN
+   let nomorTujuan = document.getElementById("id");
+   // TOTAL PEMBAYARAN USER
+   let totalTagihan = document.getElementById("totalTagihan");
+   
+   // CETAK OPERATOR PULSA
+   let cetak_operator = document.getElementById("cek_id");
+     
+   // cetak produk yang  manapun dan keluarkan hanya produk yang diklik oleh user dan ambil semua data dari html
+   
+   // ############# KALAU KAMU PAKAI HOSTING GK PERLU LAKUKAN INI, CUKUP BIKIN CLASS UNTUK QUERY DATABASE KAMU #############
+   
+   // cara ini hanya untuk natif atau untuk bukaolshop
+  function cetak_data() {
+     nama = document.getElementById("nama_barang").innerHTML;
+     harga = document.getElementById("harga_barang").innerHTML;
+     url_barang = document.getElementById("url_barang").href;
+     let nomorTujuan = document.getElementById("id").value.replace(/\s+/g, '');
+     let zonaInputan = document.getElementById("id").value.replace(/\s+/g, '');
+     let operator =document.getElementById("cek_id").innerHTML;
+     
+     // jika nomor tidak terdeteksi kasih hasil respon kosong disemua data
+     if (nomorInputan == []|| nomorInputan== null || nomorInputan == 08) {
+       nomorTujuan.innerHTML = none;
+     }
+     cetakNama.innerHTML = nama;
+     cetakHarga.innerHTML = harga;
+     totalTagihan.innerHTML = harga;
+     url = url_barang;
+     nomorTujuan.innerHTML = nomorInputan;
+     cetakOperator.innerHTML = operator;
+  }
+  
+  function alertInfoNews(){
+    let a = document.getElementById("id").value;
+    let textAlertInfo = "Masukkan Nomor Telepon 10-13 karakter";
+    let kontenAlert = document.getElementById('kontenAlertInformation');
+    if(a == 0 || a == [] || a == null || a == " " || a == ""){
+    kontenAlert.style.display = "none";
+    
+  }else if(a.length < 30){
+    kontenAlert.innerHTML = textAlertInfo;
+    kontenAlert.style = "color:#1976d2;";
+  }else if(a > 30){
+    kontenAlert.style.display = "none";
+  }
+  }
+  // SEBELUM KIRIM DATA NOMOR TUJUAN PERIKSA DAN HILANGKAN SEMUA SIMBOL SIMBOL DAN HURUF, CETAK HANYA ANGKA SAJA DAN BERIKAN SPASI DI INPUTAN
+  // hasil inputan tidak boleh lebih dari 13 karakter
+  document.getElementById('').addEventListener('input', function (e) {
+   e.target.value = e.target.value.replace(/[^0-9]/g,'').substring(0, 35).trim();
+  });
+   
+   //buat fungsi untuk kirim produk yg dipilih user ke bukaolshop
+   function kirimData(urlLink) {
+     // masukkan catatan parameter dari bukaolshop
+    const catatan = "?catatan=";
+    // ambil nomor dari hasil inputan user dan hilangkan semua karakter selain ANGKA
+    const nomor = document.getElementById('id').value;
+    // sebelum mengirimkan data 
+    //periksa dulu apakah nomor tujuan sudah di isi
+    //periksa juga produk user dan periksa harga produk
+    if (nomor == null || nomor == "https://pressphone.online" || nomor.length < 30 || nomor == "" || nomor == "0" || nomor == "none") {
+      // jika nomor kosong jangan kirimkan data nomor harus lebih dari 10 karakter dan beri peringatan ke user
+      swal({ title: "Product Tidak Di Temukan", text: "Periksa Kembali QR/Barcode", icon: "error", button: false });
+    }else{
+    // jika nomor ada isinya dan isinya lebih dari 10 karakter kirimkan data ke bukaolshop
+    window.location.href=nomor+catatan;
+   }}
+      </script>
+  <script type="text/javascript"> function contoh() { swal({ title: "Denom 5.000", text: "Masa Akses Berlaku Sesuai Zona : (Sumatra,Jawa & Balinusa 6Jam) (Kalimantan & Sulawesi 4Jam) (Maluku & Papua 2Jam)", icon: "info", button: true: }); } </script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous   </script>
+  
